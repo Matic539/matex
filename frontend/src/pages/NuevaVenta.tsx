@@ -154,7 +154,7 @@ export function NuevaVenta() {
                           <Input
                             type="number"
                             min="0.01"
-                            step="0.01"
+                            step="any"
                             value={l.cantidad}
                             onChange={(e) => actualizarLinea(idx, { cantidad: e.target.value })}
                             required

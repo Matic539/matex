@@ -334,7 +334,7 @@ export function Inventario() {
               <Input
                 id="m-cantidad"
                 type="number"
-                step="0.01"
+                step="any"
                 min={tipoMov === 'entrada' ? '0.01' : undefined}
                 value={cantidad}
                 onChange={(e) => setCantidad(e.target.value)}

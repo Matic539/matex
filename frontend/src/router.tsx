@@ -6,10 +6,10 @@ import { Inicio } from '@/pages/Inicio';
 import { Inventario } from '@/pages/Inventario';
 import { Login } from '@/pages/Login';
 import { NuevaVenta } from '@/pages/NuevaVenta';
-import { Placeholder } from '@/pages/Placeholder';
 import { ProductoDetalle } from '@/pages/ProductoDetalle';
 import { Productos } from '@/pages/Productos';
 import { Proveedores } from '@/pages/Proveedores';
+import { Reportes } from '@/pages/Reportes';
 import { Usuarios } from '@/pages/Usuarios';
 import { VentaDetalle } from '@/pages/VentaDetalle';
 import { Ventas } from '@/pages/Ventas';
@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
             element: <ProtectedRoute roles={['admin']} />,
             children: [
               { path: 'categorias', element: <Categorias /> },
-              { path: 'reportes', element: <Placeholder titulo="Reportes" fase="fase 4" /> },
+              { path: 'reportes', element: <Reportes /> },
               { path: 'usuarios', element: <Usuarios /> },
             ],
           },
