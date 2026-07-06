@@ -49,8 +49,39 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   return body.data as T;
 }
 
+// Variante que conserva { data, meta } para listados paginados
+async function requestPaged<T>(path: string): Promise<{ data: T; meta: PageMeta }> {
+  const token = localStorage.getItem('matex_token');
+  const res = await fetch(`${BASE_URL}${path}`, {
+    headers: {
+      'Content-Type': 'application/json',
+      ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    },
+  });
+  const body = await res.json().catch(() => null);
+  if (!res.ok) {
+    if (res.status === 401) {
+      localStorage.removeItem('matex_token');
+      localStorage.removeItem('matex_user');
+      window.location.href = '/login';
+    }
+    throw new ApiRequestError(
+      res.status,
+      body?.error ?? { code: 'UNKNOWN', message: `Error HTTP ${res.status}` },
+    );
+  }
+  return { data: body.data as T, meta: body.meta as PageMeta };
+}
+
+export interface PageMeta {
+  total: number;
+  page: number;
+  pageSize: number;
+}
+
 export const api = {
   get: <T>(path: string) => request<T>(path),
+  getPaged: <T>(path: string) => requestPaged<T>(path),
   post: <T>(path: string, data: unknown) =>
     request<T>(path, { method: 'POST', body: JSON.stringify(data) }),
   put: <T>(path: string, data: unknown) =>
