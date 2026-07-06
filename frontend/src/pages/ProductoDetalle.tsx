@@ -16,6 +16,7 @@ import {
   TableRow,
 } from '@/components/ui/table';
 import { productosApi, type PrecioHistorial, type Producto } from '@/api/productos';
+import { inventarioApi, type Movimiento } from '@/api/inventario';
 import { useAuth } from '@/context/AuthContext';
 import { formatCLP, formatCantidad, formatFecha } from '@/lib/format';
 
@@ -27,8 +28,11 @@ export function ProductoDetalle() {
   const { user } = useAuth();
   const esAdmin = user?.rol === 'admin';
 
+  const puedeVerKardex = user?.rol === 'admin' || user?.rol === 'inventario';
+
   const [producto, setProducto] = useState<Producto | null>(null);
   const [precios, setPrecios] = useState<PrecioHistorial[]>([]);
+  const [kardex, setKardex] = useState<Movimiento[]>([]);
   const [error, setError] = useState<string | null>(null);
 
   // Modal nuevo precio
@@ -45,6 +49,10 @@ export function ProductoDetalle() {
       ]);
       setProducto(p);
       setPrecios(h);
+      if (puedeVerKardex) {
+        const k = await inventarioApi.movimientos({ productoId, pageSize: 20 });
+        setKardex(k.data);
+      }
       setError(null);
     } catch (e) {
       setError(e instanceof Error ? e.message : 'Error al cargar el producto');
@@ -212,14 +220,75 @@ export function ProductoDetalle() {
         </CardContent>
       </Card>
 
-      <Card>
-        <CardHeader>
-          <CardTitle>Kardex de movimientos</CardTitle>
-          <CardDescription>
-            Disponible en la fase 3 (RF-12) junto al módulo de inventario.
-          </CardDescription>
-        </CardHeader>
-      </Card>
+      {puedeVerKardex && (
+        <Card>
+          <CardHeader>
+            <CardTitle>Kardex de movimientos</CardTitle>
+            <CardDescription>RF-12 — últimos 20 movimientos de este producto</CardDescription>
+          </CardHeader>
+          <CardContent>
+            {kardex.length === 0 ? (
+              <p className="py-4 text-center text-sm text-muted-foreground">
+                Sin movimientos registrados.
+              </p>
+            ) : (
+              <Table>
+                <TableHeader>
+                  <TableRow>
+                    <TableHead>Fecha</TableHead>
+                    <TableHead>Tipo</TableHead>
+                    <TableHead className="text-right">Cantidad</TableHead>
+                    <TableHead>Referencia</TableHead>
+                    <TableHead>Usuario</TableHead>
+                  </TableRow>
+                </TableHeader>
+                <TableBody>
+                  {kardex.map((m) => (
+                    <TableRow key={m.id}>
+                      <TableCell>{formatFecha(m.fecha)}</TableCell>
+                      <TableCell>
+                        <Badge
+                          variant={
+                            m.tipo === 'entrada'
+                              ? 'success'
+                              : m.tipo === 'salida_venta'
+                                ? 'secondary'
+                                : 'outline'
+                          }
+                        >
+                          {m.tipo === 'entrada'
+                            ? 'Entrada'
+                            : m.tipo === 'salida_venta'
+                              ? 'Salida por venta'
+                              : 'Ajuste'}
+                        </Badge>
+                      </TableCell>
+                      <TableCell
+                        className={`text-right font-medium ${
+                          m.cantidad < 0 ? 'text-destructive' : 'text-green-700'
+                        }`}
+                      >
+                        {m.cantidad > 0 ? '+' : ''}
+                        {formatCantidad(m.cantidad)}
+                      </TableCell>
+                      <TableCell className="max-w-56 truncate text-muted-foreground">
+                        {m.ventaId ? (
+                          <Link to={`/ventas/${m.ventaId}`} className="hover:underline">
+                            Venta #{m.ventaId}
+                          </Link>
+                        ) : (
+                          (m.proveedor?.nombre ?? m.observacion ?? '—')
+                        )}
+                      </TableCell>
+                      <TableCell>{m.usuario?.nombre ?? '—'}</TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            )}
+          </CardContent>
+        </Card>
+      )}
 
       <Dialog
         open={abierto}

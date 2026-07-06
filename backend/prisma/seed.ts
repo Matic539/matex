@@ -17,7 +17,19 @@ const usuariosDemo = [
   { nombre: 'Encargado de Bodega (demo)', email: 'bodega@matex.cl', rol: 'inventario' },
 ] as const;
 
+const formasPagoBase = ['Efectivo', 'Débito', 'Crédito', 'Transferencia'];
+
 async function main() {
+  // Formas de pago mínimas para venta manual (idempotente; el ETL puede haber creado otras)
+  for (const nombre of formasPagoBase) {
+    await prisma.formaPago.upsert({
+      where: { nombre },
+      update: {},
+      create: { nombre },
+    });
+  }
+  console.log(`✅ Formas de pago verificadas: ${formasPagoBase.join(', ')}`);
+
   const passwordHash = await bcrypt.hash(DEMO_PASSWORD, 12);
 
   for (const u of usuariosDemo) {
