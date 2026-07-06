@@ -1,0 +1,201 @@
+// Sistema Matex — Prisma schema
+// Mapea el esquema `operacional` existente (DDL: software/_base-de-datos/sql/03_operacional.sql, DBD-01 v1.1 §5).
+// El esquema `analytics` (vistas materializadas) se consume vía $queryRaw en el módulo de reportes.
+// IMPORTANTE: la BD ya existe; no usar `prisma migrate`. Ante cambios de DDL, actualizar este schema a mano o con `prisma db pull`.
+
+generator client {
+  provider        = "prisma-client-js"
+  previewFeatures = ["multiSchema"]
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+  schemas  = ["operacional"]
+}
+
+// 5.1 usuario ---------------------------------------------------
+model Usuario {
+  id           Int      @id @default(autoincrement())
+  nombre       String   @db.VarChar(100)
+  email        String   @unique @db.VarChar(150)
+  passwordHash String   @map("password_hash") @db.VarChar(255)
+  rol          String   @db.VarChar(20) // 'admin' | 'ventas' | 'inventario' (CHECK en BD)
+  activo       Boolean  @default(true)
+  creadoEn     DateTime @default(now()) @map("creado_en") @db.Timestamptz()
+
+  ventas      Venta[]
+  movimientos MovimientoStock[]
+
+  @@map("usuario")
+  @@schema("operacional")
+}
+
+// 5.2 categoria -------------------------------------------------
+model Categoria {
+  id          Int     @id @default(autoincrement())
+  nombre      String  @unique @db.VarChar(80)
+  descripcion String?
+  activo      Boolean @default(true)
+
+  productos Producto[]
+
+  @@map("categoria")
+  @@schema("operacional")
+}
+
+// 5.3 producto --------------------------------------------------
+model Producto {
+  id           Int     @id @default(autoincrement())
+  codigo       String  @unique @db.VarChar(30)
+  nombre       String  @db.VarChar(120)
+  categoriaId  Int     @map("categoria_id")
+  unidadMedida String  @map("unidad_medida") @db.VarChar(20)
+  dimensiones  String? @db.VarChar(60)
+  stockMinimo  Decimal @default(0) @map("stock_minimo") @db.Decimal(10, 2)
+  activo       Boolean @default(true)
+
+  categoria     Categoria         @relation(fields: [categoriaId], references: [id])
+  precios       PrecioProducto[]
+  ventaDetalles VentaDetalle[]
+  movimientos   MovimientoStock[]
+  conteos       ConteoFisico[]
+
+  @@index([categoriaId], map: "idx_producto_categoria")
+  @@map("producto")
+  @@schema("operacional")
+}
+
+// 5.4 precio_producto -------------------------------------------
+// Índice parcial único uq_precio_vigente (un precio vigente por producto)
+// no es representable en Prisma: se garantiza en BD y en la capa service.
+model PrecioProducto {
+  id           Int       @id @default(autoincrement())
+  productoId   Int       @map("producto_id")
+  precioNeto   Decimal   @map("precio_neto") @db.Decimal(12, 2)
+  precioBruto  Decimal   @map("precio_bruto") @db.Decimal(12, 2)
+  vigenteDesde DateTime  @map("vigente_desde") @db.Date
+  vigenteHasta DateTime? @map("vigente_hasta") @db.Date // NULL = vigente
+
+  producto Producto @relation(fields: [productoId], references: [id])
+
+  @@map("precio_producto")
+  @@schema("operacional")
+}
+
+// 5.5 proveedor -------------------------------------------------
+model Proveedor {
+  id       Int     @id @default(autoincrement())
+  nombre   String  @db.VarChar(150)
+  contacto String? @db.VarChar(100)
+  telefono String? @db.VarChar(30)
+  email    String? @db.VarChar(150)
+  activo   Boolean @default(true)
+
+  movimientos MovimientoStock[]
+
+  @@map("proveedor")
+  @@schema("operacional")
+}
+
+// 5.6 forma_pago ------------------------------------------------
+model FormaPago {
+  id     Int    @id @default(autoincrement())
+  nombre String @unique @db.VarChar(40)
+
+  ventas Venta[]
+
+  @@map("forma_pago")
+  @@schema("operacional")
+}
+
+// 5.7 venta -----------------------------------------------------
+model Venta {
+  id          Int      @id @default(autoincrement())
+  fecha       DateTime @db.Timestamptz()
+  usuarioId   Int?     @map("usuario_id") // NULL en histórico migrado
+  formaPagoId Int      @map("forma_pago_id")
+  estado      String   @db.VarChar(20) // 'pendiente' | 'entregado' | 'anulada'
+  origen      String   @db.VarChar(10) // 'manual' | 'vessi' | 'excel'
+  vessiId     String?  @unique @map("vessi_id") @db.VarChar(60) // idempotencia RF-21
+  total       Decimal  @db.Decimal(12, 2)
+
+  usuario   Usuario?       @relation(fields: [usuarioId], references: [id])
+  formaPago FormaPago      @relation(fields: [formaPagoId], references: [id])
+  detalles  VentaDetalle[]
+
+  @@index([fecha], map: "idx_venta_fecha")
+  @@index([origen], map: "idx_venta_origen")
+  @@map("venta")
+  @@schema("operacional")
+}
+
+// 5.8 venta_detalle ---------------------------------------------
+model VentaDetalle {
+  id             Int     @id @default(autoincrement())
+  ventaId        Int     @map("venta_id")
+  productoId     Int     @map("producto_id")
+  cantidad       Decimal @db.Decimal(10, 2)
+  precioUnitario Decimal @map("precio_unitario") @db.Decimal(12, 2)
+  subtotal       Decimal @db.Decimal(12, 2)
+
+  venta       Venta             @relation(fields: [ventaId], references: [id], onDelete: Cascade)
+  producto    Producto          @relation(fields: [productoId], references: [id])
+  movimientos MovimientoStock[]
+
+  @@index([ventaId], map: "idx_detalle_venta")
+  @@index([productoId], map: "idx_detalle_producto")
+  @@map("venta_detalle")
+  @@schema("operacional")
+}
+
+// 5.9 movimiento_stock (kardex) ---------------------------------
+model MovimientoStock {
+  id             Int      @id @default(autoincrement())
+  productoId     Int      @map("producto_id")
+  tipo           String   @db.VarChar(15) // 'entrada' | 'salida_venta' | 'ajuste'
+  cantidad       Decimal  @db.Decimal(10, 2) // signo indica dirección; CHECK <> 0
+  fecha          DateTime @default(now()) @db.Timestamptz()
+  ventaDetalleId Int?     @map("venta_detalle_id")
+  proveedorId    Int?     @map("proveedor_id")
+  usuarioId      Int?     @map("usuario_id")
+  observacion    String?
+
+  producto     Producto      @relation(fields: [productoId], references: [id])
+  ventaDetalle VentaDetalle? @relation(fields: [ventaDetalleId], references: [id])
+  proveedor    Proveedor?    @relation(fields: [proveedorId], references: [id])
+  usuario      Usuario?      @relation(fields: [usuarioId], references: [id])
+
+  @@index([productoId, fecha], map: "idx_mov_producto_fecha")
+  @@map("movimiento_stock")
+  @@schema("operacional")
+}
+
+// 5.10 conteo_fisico --------------------------------------------
+model ConteoFisico {
+  id             Int      @id @default(autoincrement())
+  fecha          DateTime @db.Date
+  productoId     Int      @map("producto_id")
+  cantidadFisica Decimal  @map("cantidad_fisica") @db.Decimal(10, 2)
+  diferencia     Decimal? @db.Decimal(10, 2)
+  observacion    String?
+
+  producto Producto @relation(fields: [productoId], references: [id])
+
+  @@index([productoId, fecha], map: "idx_conteo_producto_fecha")
+  @@map("conteo_fisico")
+  @@schema("operacional")
+}
+
+// 5.11 log_sincronizacion (punto de extensión Vessi, RF-19/20) --
+model LogSincronizacion {
+  id               Int       @id @default(autoincrement())
+  fechaInicio      DateTime  @map("fecha_inicio") @db.Timestamptz()
+  fechaFin         DateTime? @map("fecha_fin") @db.Timestamptz()
+  estado           String?   @db.VarChar(15) // 'ok' | 'error' | 'parcial'
+  ventasImportadas Int       @default(0) @map("ventas_importadas")
+  mensajeError     String?   @map("mensaje_error")
+
+  @@map("log_sincronizacion")
+  @@schema("operacional")
+}
