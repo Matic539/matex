@@ -49,7 +49,17 @@ export function Dashboard() {
             </CardTitle>
           </CardHeader>
           <CardContent>
-            <p className="text-2xl font-bold">{health ? `● ${health.database}` : '—'}</p>
+            <p
+              className={`text-2xl font-bold ${
+                health?.database === 'ok'
+                  ? 'text-green-600'
+                  : health
+                    ? 'text-destructive'
+                    : ''
+              }`}
+            >
+              {health ? `● ${health.database}` : '—'}
+            </p>
           </CardContent>
         </Card>
         <Card>

@@ -8,22 +8,30 @@ import {
   Truck,
   BarChart3,
   Users,
+  LogOut,
 } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useAuth } from '@/context/AuthContext';
+import { ROL_LABELS, type Rol } from '@/types/auth';
+import { Button } from '@/components/ui/button';
 
-// Navegación principal. La visibilidad por rol se aplica en fase 1.
-const navItems = [
-  { to: '/', label: 'Dashboard', icon: LayoutDashboard, end: true },
-  { to: '/productos', label: 'Productos', icon: Package },
-  { to: '/categorias', label: 'Categorías', icon: Tags },
-  { to: '/inventario', label: 'Inventario', icon: Warehouse },
-  { to: '/ventas', label: 'Ventas', icon: ShoppingCart },
-  { to: '/proveedores', label: 'Proveedores', icon: Truck },
-  { to: '/reportes', label: 'Reportes', icon: BarChart3 },
-  { to: '/usuarios', label: 'Usuarios', icon: Users },
-];
+// Navegación principal con visibilidad por rol (RF-02, RNF-03)
+const navItems: { to: string; label: string; icon: typeof Package; roles: Rol[]; end?: boolean }[] =
+  [
+    { to: '/', label: 'Dashboard', icon: LayoutDashboard, roles: ['admin'], end: true },
+    { to: '/productos', label: 'Productos', icon: Package, roles: ['admin', 'ventas', 'inventario'] },
+    { to: '/categorias', label: 'Categorías', icon: Tags, roles: ['admin'] },
+    { to: '/inventario', label: 'Inventario', icon: Warehouse, roles: ['admin', 'inventario'] },
+    { to: '/ventas', label: 'Ventas', icon: ShoppingCart, roles: ['admin', 'ventas'] },
+    { to: '/proveedores', label: 'Proveedores', icon: Truck, roles: ['admin', 'inventario'] },
+    { to: '/reportes', label: 'Reportes', icon: BarChart3, roles: ['admin'] },
+    { to: '/usuarios', label: 'Usuarios', icon: Users, roles: ['admin'] },
+  ];
 
 export function AppLayout() {
+  const { user, logout } = useAuth();
+  const visibles = navItems.filter((item) => user && item.roles.includes(user.rol));
+
   return (
     <div className="flex min-h-screen">
       {/* Sidebar */}
@@ -35,7 +43,7 @@ export function AppLayout() {
           </span>
         </div>
         <nav className="flex-1 space-y-1 p-3">
-          {navItems.map(({ to, label, icon: Icon, end }) => (
+          {visibles.map(({ to, label, icon: Icon, end }) => (
             <NavLink
               key={to}
               to={to}
@@ -63,9 +71,17 @@ export function AppLayout() {
       <div className="flex flex-1 flex-col">
         <header className="flex h-14 items-center justify-between border-b px-6">
           <span className="text-sm font-medium text-muted-foreground md:hidden">Matex</span>
-          <div className="ml-auto text-sm text-muted-foreground">
-            {/* Usuario y logout: fase 1 */}
-            Sesión: —
+          <div className="ml-auto flex items-center gap-4">
+            {user && (
+              <div className="text-right text-sm leading-tight">
+                <p className="font-medium">{user.nombre}</p>
+                <p className="text-xs text-muted-foreground">{ROL_LABELS[user.rol]}</p>
+              </div>
+            )}
+            <Button variant="ghost" size="sm" onClick={logout} title="Cerrar sesión">
+              <LogOut />
+              Salir
+            </Button>
           </div>
         </header>
         <main className="flex-1 p-6">

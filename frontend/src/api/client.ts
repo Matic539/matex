@@ -34,6 +34,12 @@ async function request<T>(path: string, options: RequestInit = {}): Promise<T> {
   const body = await res.json().catch(() => null);
 
   if (!res.ok) {
+    // Sesión expirada o token inválido: limpiar y volver al login (RF-04)
+    if (res.status === 401 && !path.startsWith('/auth/login')) {
+      localStorage.removeItem('matex_token');
+      localStorage.removeItem('matex_user');
+      window.location.href = '/login';
+    }
     throw new ApiRequestError(
       res.status,
       body?.error ?? { code: 'UNKNOWN', message: `Error HTTP ${res.status}` },
