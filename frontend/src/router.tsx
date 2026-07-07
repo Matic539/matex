@@ -5,6 +5,7 @@ import { Categorias } from '@/pages/Categorias';
 import { Inicio } from '@/pages/Inicio';
 import { Inventario } from '@/pages/Inventario';
 import { Login } from '@/pages/Login';
+import { NotFound } from '@/pages/NotFound';
 import { NuevaVenta } from '@/pages/NuevaVenta';
 import { ProductoDetalle } from '@/pages/ProductoDetalle';
 import { Productos } from '@/pages/Productos';
@@ -55,6 +56,7 @@ export const router = createBrowserRouter([
               { path: 'ventas/:id', element: <VentaDetalle /> },
             ],
           },
+          { path: '*', element: <NotFound /> },
         ],
       },
     ],

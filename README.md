@@ -74,6 +74,19 @@ frontend/src/
 └── router.tsx     # rutas (protección por rol en fase 1)
 ```
 
+## Estado del prototipo (PDP-01)
+
+| Fase | Contenido | Estado |
+|---|---|---|
+| 0 | Fundaciones (scaffold, healthcheck, seed) | ✅ |
+| 1 | Autenticación y usuarios (RF-01 a RF-04) | ✅ |
+| 2 | Productos, categorías, precios, proveedores (RF-05 a RF-08, RF-18) | ✅ |
+| 3 | Inventario y ventas (RF-09 a RF-13, RF-15, RF-16) + 16 tests | ✅ |
+| 4 | Dashboard y reportes sobre `analytics` (RF-25 a RF-28) | ✅ |
+| 5 | Pulido, stub Vessi, plan de pruebas, documentación | ✅ |
+
+Fuera del prototipo: integración Vessi (stub en `backend/src/modules/sync-vessi/`) y módulo predictivo (la proyección actual usa promedio móvil). Manual técnico: `software/_documentacion-tecnica/MANUAL_TECNICO_PROTOTIPO.md`. Plan de pruebas: `documentos/07_pruebas-y-validacion/`.
+
 ## Convenciones
 
 - API REST bajo `/api/v1/`, recursos en plural, respuestas `{ data, meta }`, errores `{ error: { code, message } }`.

@@ -153,7 +153,7 @@ export function NuevaVenta() {
                         <TableCell>
                           <Input
                             type="number"
-                            min="0.01"
+                            min="0"
                             step="any"
                             value={l.cantidad}
                             onChange={(e) => actualizarLinea(idx, { cantidad: e.target.value })}

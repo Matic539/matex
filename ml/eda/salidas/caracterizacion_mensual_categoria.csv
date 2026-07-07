@@ -1,0 +1,11 @@
+categoria,n_periodos,pct_ceros,adi,cv2,clase_sb,tendencia_anual,autocorr_estac,cantidad_total,monto_neto_total
+Accesorios,50,14.0,1.16,2.82,erratica,-139.3,0.12,6955.0,20981890.720000003
+Adhesivos,30,3.3,1.03,0.19,suave,-6.0,0.19,4151.0,22485370.100000005
+Aislación,45,35.6,1.55,2.21,irregular,-2.4,-0.15,782.0,11164857.030000001
+Maderas,50,30.0,1.43,1.41,irregular,-16.1,0.02,1143.0,4038126.04
+Paneles exteriores,44,2.3,1.02,0.38,suave,-145.9,-0.02,27215.0,411854075.7
+Paneles interiores,32,3.1,1.03,0.29,suave,33.7,0.22,18694.0,94098369.86000001
+Perfiles y terminaciones,27,3.7,1.04,0.34,suave,420.2,0.28,40906.0,33421317.53
+Pisos SPC,50,4.0,1.04,0.48,suave,-6.0,-0.06,8546.5,252646030.65999997
+Revestimientos murales,32,3.1,1.03,0.27,suave,22.4,-0.15,9298.0,245335312.37000003
+Terciados,50,4.0,1.04,0.96,erratica,-87.2,0.23,12079.0,229405218.38

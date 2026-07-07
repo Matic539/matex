@@ -1,0 +1,21 @@
+modelo,mape,wape,mape_acum,n_folds,serie_id,nivel,granularidad,monto_total,nombre
+media-movil-8,83.16,53.46,34.21,7,1.0,categoria,mensual,252646030.66,Pisos SPC
+naive-estacional,62.98,63.06,57.89,7,1.0,categoria,mensual,252646030.66,Pisos SPC
+media-movil-8,189.68,76.17,41.43,7,2.0,categoria,mensual,229387579.72,Terciados
+naive-estacional,153.53,61.24,28.94,7,2.0,categoria,mensual,229387579.72,Terciados
+media-movil-8,45.13,44.07,35.36,7,3.0,categoria,mensual,411854075.7,Paneles exteriores
+naive-estacional,42.09,39.59,20.73,7,3.0,categoria,mensual,411854075.7,Paneles exteriores
+media-movil-8,43.14,32.47,21.76,7,4.0,categoria,mensual,94098369.86,Paneles interiores
+naive-estacional,63.28,51.49,35.28,7,4.0,categoria,mensual,94098369.86,Paneles interiores
+media-movil-8,67.11,35.36,27.72,7,5.0,categoria,mensual,245335312.37,Revestimientos murales
+naive-estacional,59.21,37.55,23.63,7,5.0,categoria,mensual,245335312.37,Revestimientos murales
+media-movil-8,51.46,42.04,34.07,7,6.0,categoria,mensual,33421317.53,Perfiles y terminaciones
+naive-estacional,56.25,54.2,52.67,7,6.0,categoria,mensual,33421317.53,Perfiles y terminaciones
+media-movil-8,39.64,24.29,6.94,7,7.0,categoria,mensual,22485370.1,Adhesivos
+naive-estacional,59.77,45.49,21.45,7,7.0,categoria,mensual,22485370.1,Adhesivos
+media-movil-8,956.25,6237.5,6237.5,7,8.0,categoria,mensual,4038126.04,Maderas
+naive-estacional,500.0,4400.0,4400.0,7,8.0,categoria,mensual,4038126.04,Maderas
+media-movil-8,,,,7,9.0,categoria,mensual,11164857.03,Aislación
+naive-estacional,,,,7,9.0,categoria,mensual,11164857.03,Aislación
+media-movil-8,284.65,271.66,265.42,7,10.0,categoria,mensual,20981890.72,Accesorios
+naive-estacional,343.89,527.4,506.3,7,10.0,categoria,mensual,20981890.72,Accesorios

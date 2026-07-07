@@ -1,0 +1,63 @@
+producto_id,codigo,nombre,categoria,n_periodos,pct_ceros,adi,cv2,clase_sb,tendencia_anual,autocorr_estac,cantidad_total,monto_neto_total
+1,SPC-DARK,SPC DARK,Pisos SPC,50,12.0,1.14,0.63,erratica,-3.3,-0.0,4373.5,129286540.24
+2,SPC-MEDIUM,SPC MEDIUM,Pisos SPC,50,24.0,1.32,0.53,erratica,-3.1,0.19,1658.0,49012709.13
+3,SPC-GREY,SPC GREY,Pisos SPC,50,8.0,1.09,0.81,erratica,0.3,-0.15,2515.0,74346781.29
+4,TERC-EST-15,Terc Estr 15mm,Terciados,50,6.0,1.06,1.63,erratica,-39.8,0.26,3855.0,71102899.0
+5,TERC-EST-15-2DA,Terc Estr 15mm 2da,Terciados,48,58.3,2.4,0.84,irregular,-2.3,0.18,367.0,5856579.82
+6,TERC-EST-18N,Terc Estr 18mm N,Terciados,50,22.0,1.28,0.72,erratica,-35.3,0.19,7045.0,137476092.55
+7,TERC-EST-18-2DA,Terc Estr 18mm 2da,Terciados,50,50.0,2.0,1.22,irregular,-10.6,0.03,791.0,14616882.299999999
+9,TERC-RAN-9,Terc Ran 9mm,Terciados,21,95.2,21.0,0.0,intermitente,-3.3,,21.0,352764.71
+10,PANEL-CIPRES,PANEL CIPRES,Paneles exteriores,44,4.5,1.05,0.73,erratica,-53.2,0.25,10228.0,154623294.12
+11,PANEL-BLACK,PANEL BLACK,Paneles exteriores,44,25.0,1.33,1.31,irregular,-34.4,0.01,3448.0,52125647.09
+12,PANEL-NEW-BLACK,PANEL NEW BLACK,Paneles exteriores,11,36.4,1.57,0.71,irregular,107.0,,1017.0,15801957.94
+13,PANEL-GREY,PANEL GREY,Paneles exteriores,44,6.8,1.07,0.77,erratica,-76.5,0.11,8541.0,129119823.60000001
+14,PANEL-ALERCE,PANEL ALERCE,Paneles exteriores,38,31.6,1.46,0.98,irregular,-49.9,-0.29,3981.0,60183352.949999996
+16,ELM-LIGHT,ELM Light Claro,Paneles interiores,32,6.2,1.07,0.76,erratica,-95.2,0.16,5795.0,29169789.940000005
+17,ELM-GREY,ELM Grey,Paneles interiores,27,11.1,1.12,0.55,erratica,-42.2,-0.06,1182.0,5949731.089999999
+18,ELM-AGED,ELM AGED,Paneles interiores,20,10.0,1.11,0.44,suave,-69.6,0.19,2596.0,13067260.5
+19,ELM-BLACK,ELM Black,Paneles interiores,13,30.8,1.44,0.23,intermitente,-23.4,,235.0,1182899.16
+20,T111-TEAK,T1-11 Teak,Paneles interiores,32,56.2,2.29,1.94,irregular,-71.5,0.74,1404.0,7067193.3100000005
+21,T111-CHERRY,T1-11 Cherry,Paneles interiores,27,18.5,1.23,1.09,erratica,19.8,-0.22,2380.0,11980000.040000001
+22,T111-DARK,T1-11 Dark,Paneles interiores,27,3.7,1.04,0.95,erratica,31.4,0.01,3766.0,18956588.25
+23,T111-LIGHT,T1-11 Light,Paneles interiores,13,30.8,1.44,0.49,intermitente,-17.7,,1336.0,6724907.57
+24,WALLTEX-BLANCO,WALL tex blanco,Revestimientos murales,12,66.7,3.0,0.15,intermitente,-46.1,,126.0,2116588.25
+25,WALLTEX-CAFE,WALL tex café,Revestimientos murales,32,37.5,1.6,0.96,irregular,8.1,0.17,469.0,7878411.82
+26,MARMO-BLANCA,Marmolisima Blanca,Revestimientos murales,32,6.2,1.07,0.29,suave,-19.3,0.2,3586.0,102427008.79
+27,MARMO-GRIS,Marmolisima Gris,Revestimientos murales,31,6.5,1.07,0.44,suave,0.1,-0.4,2013.0,57497370.14999999
+28,MARMO-TRAVERTINO,Marmolisima Travertino,Revestimientos murales,27,18.5,1.23,1.59,erratica,-12.7,-0.07,463.0,13224680.74
+29,MARMO-NEGRA,Marmolisima Negra,Revestimientos murales,27,11.1,1.12,1.17,erratica,-9.1,-0.07,678.0,19365731.370000005
+30,MARMO-AZUL,Marmolisima Azul,Revestimientos murales,27,7.4,1.08,0.71,erratica,1.5,-0.22,878.0,25078336.31
+32,MARMOL-SPC-3MM,Marmol SPC 3mm,Revestimientos murales,7,28.6,1.4,0.24,intermitente,-69.9,,172.0,3612000.0
+33,PANEL-WHITE-INT,Panel White Interior,Revestimientos murales,24,25.0,1.33,0.55,irregular,-14.9,0.01,748.0,11936571.48
+34,PANEL-ROCA-LIGHT,Panel Roca Light,Revestimientos murales,16,68.8,3.2,0.49,irregular,-5.1,,33.0,526613.44
+35,PANEL-ROCA-BLACK,Panel Roca Black,Revestimientos murales,23,69.6,3.29,0.88,irregular,-6.6,-0.15,85.0,1356428.58
+36,SEPARADOR-AMB,Separador de Ambiente,Revestimientos murales,16,81.2,5.33,0.04,intermitente,-9.8,,47.0,315571.44
+37,PERFIL-H-GREY,Perfil H Grey,Perfiles y terminaciones,27,3.7,1.04,0.39,suave,-10.6,-0.31,2151.0,9019739.370000001
+38,PERFIL-H-GOLD,Perfil H Gold,Perfiles y terminaciones,27,11.1,1.12,0.42,suave,-0.9,0.43,783.0,3283336.14
+39,PERFIL-E-GREY,Perfil E Grey,Perfiles y terminaciones,13,7.7,1.08,0.33,suave,-35.7,,374.0,1568285.62
+40,PERFIL-E-GOLD,Perfil E Gold,Perfiles y terminaciones,12,41.7,1.71,0.21,intermitente,-17.3,,91.0,381588.22000000003
+41,PERFIL-ITS-V-CIPRES,Perfil ITSPANEL V Cipres,Perfiles y terminaciones,11,27.3,1.38,0.92,irregular,-16.0,,108.0,815899.14
+42,PERFIL-ITS-V-ALERCE,Perfil ITSPANEL V Alerce,Perfiles y terminaciones,9,44.4,1.8,0.25,intermitente,-26.2,,52.0,0.0
+43,PERFIL-ITS-V-GRIS,Perfil ITSPANEL V Gris,Perfiles y terminaciones,7,42.9,1.75,0.13,intermitente,-41.6,,55.0,323067.25
+44,PERFIL-ITS-V-NEGRO,Perfil ITSPANEL V Negro,Perfiles y terminaciones,9,55.6,2.25,0.45,intermitente,7.0,,64.0,483495.80000000005
+45,PERFIL-ITS-V-BLANCO,Perfil ITSPANEL V Blanco,Perfiles y terminaciones,9,33.3,1.5,0.44,intermitente,-1.8,,32.0,241747.89
+46,PERFIL-ITS-J-CIPRES,Perfil ITSPANEL J Cipres,Perfiles y terminaciones,11,27.3,1.38,0.45,intermitente,-80.7,,418.0,3157831.92
+47,PERFIL-ITS-J-ALERCE,Perfil ITSPANEL J Alerce,Perfiles y terminaciones,9,55.6,2.25,0.76,irregular,-82.8,,132.0,997210.07
+48,PERFIL-ITS-J-GRIS,Perfil ITSPANEL J Gris,Perfiles y terminaciones,7,42.9,1.75,1.25,irregular,-216.4,,190.0,1435378.15
+49,PERFIL-ITS-J-NEGRO,Perfil ITSPANEL J Negro,Perfiles y terminaciones,10,70.0,3.33,0.01,intermitente,-18.4,,107.0,808344.54
+50,PERFIL-ITS-J-BLANCO,Perfil ITSPANEL J Blanco,Perfiles y terminaciones,9,44.4,1.8,0.62,irregular,-43.4,,105.0,793235.31
+51,PERFIL-ITS-H-GRIS,Perfil ITSPANEL H Gris,Perfiles y terminaciones,7,42.9,1.75,0.19,intermitente,-60.4,,74.0,621226.91
+52,PERFIL-ITS-H-CIPRES,Perfil ITSPANEL H Cipres,Perfiles y terminaciones,7,42.9,1.75,0.92,irregular,-22.3,,24.0,201478.99
+53,PERFIL-ITS-H-NEGRO,Perfil ITSPANEL H Negro,Perfiles y terminaciones,7,28.6,1.4,0.09,intermitente,-6.4,,17.0,142714.28
+54,PERFIL-ITS-H-ALERCE,Perfil ITSPANEL H Alerce,Perfiles y terminaciones,7,57.1,2.33,0.83,irregular,-22.3,,21.0,176294.13
+56,PERFIL-INICIO,Perfil Inicio,Perfiles y terminaciones,7,14.3,1.17,0.27,suave,-171.0,,371.0,2490999.9899999998
+57,PERFIL-L-WPC-LIGHT,Perfil L WPC Light,Perfiles y terminaciones,7,14.3,1.17,0.23,suave,-25.7,,74.0,310302.51
+58,PERFIL-L-WPC-AGED,Perfil L WPC Aged,Perfiles y terminaciones,7,14.3,1.17,0.44,suave,-18.9,,51.0,213857.11999999997
+59,CLIP-MONTAJE,Clip de montaje,Perfiles y terminaciones,26,3.8,1.04,0.3,suave,199.6,0.15,35612.0,5955284.180000001
+60,NO-CLAVO,No Clavo,Adhesivos,30,3.3,1.03,0.22,suave,-15.9,0.09,2641.0,8719823.7
+61,FIX-ALL,Fix All,Adhesivos,30,6.7,1.07,0.39,suave,9.6,0.22,1146.0,7650957.93
+62,GALON-NO-CLAVO,Galon no Clavo,Adhesivos,30,6.7,1.07,0.35,suave,0.3,-0.35,364.0,6114588.470000001
+63,MADERA-2X3,2x3,Maderas,50,36.0,1.56,1.57,irregular,-11.9,0.02,792.0,2389310.9
+64,TERRAZA-4,Terraza 4',Maderas,47,59.6,2.47,1.68,irregular,-5.9,-0.06,351.0,1648815.1400000001
+65,LANA-VIDRIO,Lana de Vidrio,Aislación,45,35.6,1.55,2.21,irregular,-2.4,-0.15,782.0,11164857.030000001
+66,ROLLETE-96,Rollete 96,Accesorios,50,14.0,1.16,2.82,erratica,-139.3,0.12,6955.0,20981890.720000003

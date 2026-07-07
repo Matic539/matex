@@ -1,0 +1,105 @@
+modelo,mape,wape,mape_acum,n_folds,serie_id,nivel,granularidad,monto_total,nombre
+media-movil-8,428.42,159.97,110.74,11,1.0,producto,semanal,129286540.24,SPC DARK
+naive-estacional,108.17,126.09,67.5,11,1.0,producto,semanal,129286540.24,SPC DARK
+media-movil-8,125.59,107.68,50.0,11,2.0,producto,semanal,49012709.13,SPC MEDIUM
+naive-estacional,118.79,113.15,64.59,11,2.0,producto,semanal,49012709.13,SPC MEDIUM
+media-movil-8,185.92,180.84,137.39,11,3.0,producto,semanal,74346781.29,SPC GREY
+naive-estacional,206.45,147.52,77.3,11,3.0,producto,semanal,74346781.29,SPC GREY
+media-movil-8,160.36,310.65,272.23,11,4.0,producto,semanal,71085260.34,Terc Estr 15mm
+naive-estacional,307.65,600.89,509.29,11,4.0,producto,semanal,71085260.34,Terc Estr 15mm
+media-movil-8,96.72,126.77,79.38,11,5.0,producto,semanal,5856579.82,Terc Estr 15mm 2da
+naive-estacional,78.61,83.75,61.53,11,5.0,producto,semanal,5856579.82,Terc Estr 15mm 2da
+media-movil-8,240.77,1830.33,1807.42,11,6.0,producto,semanal,137476092.55,Terc Estr 18mm N
+naive-estacional,67.21,1131.6,1083.77,11,6.0,producto,semanal,137476092.55,Terc Estr 18mm N
+media-movil-8,100.0,100.0,100.0,11,7.0,producto,semanal,14616882.3,Terc Estr 18mm 2da
+naive-estacional,290.97,745.7,557.24,11,7.0,producto,semanal,14616882.3,Terc Estr 18mm 2da
+media-movil-8,,,,11,9.0,producto,semanal,352764.71,Terc Ran 9mm
+naive-estacional,,,,11,9.0,producto,semanal,352764.71,Terc Ran 9mm
+media-movil-8,186.34,90.72,44.03,11,10.0,producto,semanal,154623294.12,PANEL CIPRES
+naive-estacional,224.41,128.82,40.53,11,10.0,producto,semanal,154623294.12,PANEL CIPRES
+media-movil-8,95.66,836.6,805.51,11,11.0,producto,semanal,52125647.09,PANEL BLACK
+naive-estacional,83.25,1123.19,1022.79,11,11.0,producto,semanal,52125647.09,PANEL BLACK
+media-movil-8,148.9,112.85,67.33,4,12.0,producto,semanal,15801957.94,PANEL NEW BLACK
+naive-estacional,148.9,112.85,67.33,4,12.0,producto,semanal,15801957.94,PANEL NEW BLACK
+media-movil-8,143.98,280.46,233.46,11,13.0,producto,semanal,129119823.6,PANEL GREY
+naive-estacional,291.56,257.24,136.36,11,13.0,producto,semanal,129119823.6,PANEL GREY
+media-movil-8,129.06,135.15,63.02,11,14.0,producto,semanal,60183352.95,PANEL ALERCE
+naive-estacional,123.81,113.94,73.74,11,14.0,producto,semanal,60183352.95,PANEL ALERCE
+media-movil-8,284.63,95.6,47.07,11,16.0,producto,semanal,29169789.94,ELM Light Claro
+naive-estacional,358.0,172.17,78.27,11,16.0,producto,semanal,29169789.94,ELM Light Claro
+media-movil-8,74.55,165.64,83.06,11,17.0,producto,semanal,5949731.09,ELM Grey
+naive-estacional,511.56,394.74,277.57,11,17.0,producto,semanal,5949731.09,ELM Grey
+media-movil-8,131.47,85.36,39.5,11,18.0,producto,semanal,13067260.5,ELM AGED
+naive-estacional,146.81,112.29,52.17,11,18.0,producto,semanal,13067260.5,ELM AGED
+media-movil-8,68.19,182.36,92.62,6,19.0,producto,semanal,1182899.16,ELM Black
+naive-estacional,68.19,182.36,92.62,6,19.0,producto,semanal,1182899.16,ELM Black
+media-movil-8,,,,11,20.0,producto,semanal,7067193.31,T1-11 Teak
+naive-estacional,,,,11,20.0,producto,semanal,7067193.31,T1-11 Teak
+media-movil-8,193.83,174.5,127.24,11,21.0,producto,semanal,11980000.04,T1-11 Cherry
+naive-estacional,95.39,160.91,104.04,11,21.0,producto,semanal,11980000.04,T1-11 Cherry
+media-movil-8,421.99,134.1,84.91,11,22.0,producto,semanal,18956588.25,T1-11 Dark
+naive-estacional,191.23,102.31,53.25,11,22.0,producto,semanal,18956588.25,T1-11 Dark
+media-movil-8,228.54,324.38,310.16,6,23.0,producto,semanal,6724907.57,T1-11 Light
+naive-estacional,228.54,324.38,310.16,6,23.0,producto,semanal,6724907.57,T1-11 Light
+media-movil-8,62.5,475.0,350.0,5,24.0,producto,semanal,2116588.25,WALL tex blanco
+naive-estacional,62.5,475.0,350.0,5,24.0,producto,semanal,2116588.25,WALL tex blanco
+media-movil-8,127.1,120.26,66.74,11,25.0,producto,semanal,7878411.82,WALL tex café
+naive-estacional,95.14,107.55,79.17,11,25.0,producto,semanal,7878411.82,WALL tex café
+media-movil-8,177.99,59.76,30.84,11,26.0,producto,semanal,102427008.79,Marmolisima Blanca
+naive-estacional,158.78,76.47,40.26,11,26.0,producto,semanal,102427008.79,Marmolisima Blanca
+media-movil-8,146.03,87.82,58.1,11,27.0,producto,semanal,57497370.15,Marmolisima Gris
+naive-estacional,132.94,93.32,44.95,11,27.0,producto,semanal,57497370.15,Marmolisima Gris
+media-movil-8,95.26,188.01,127.7,11,28.0,producto,semanal,13224680.74,Marmolisima Travertino
+naive-estacional,275.1,442.92,308.44,11,28.0,producto,semanal,13224680.74,Marmolisima Travertino
+media-movil-8,168.77,194.04,157.36,11,29.0,producto,semanal,19365731.37,Marmolisima Negra
+naive-estacional,176.83,284.86,213.11,11,29.0,producto,semanal,19365731.37,Marmolisima Negra
+media-movil-8,210.91,133.25,95.99,11,30.0,producto,semanal,25078336.31,Marmolisima Azul
+naive-estacional,210.85,135.46,61.63,11,30.0,producto,semanal,25078336.31,Marmolisima Azul
+media-movil-8,192.9,226.08,164.06,11,33.0,producto,semanal,11936571.48,Panel White Interior
+naive-estacional,150.86,168.87,115.18,11,33.0,producto,semanal,11936571.48,Panel White Interior
+media-movil-8,90.1,128.08,57.44,10,34.0,producto,semanal,526613.44,Panel Roca Light
+naive-estacional,90.1,128.08,57.44,10,34.0,producto,semanal,526613.44,Panel Roca Light
+media-movil-8,87.5,195.0,140.0,11,35.0,producto,semanal,1356428.58,Panel Roca Black
+naive-estacional,100.0,865.0,745.0,11,35.0,producto,semanal,1356428.58,Panel Roca Black
+media-movil-8,79.17,308.33,150.0,10,36.0,producto,semanal,315571.44,Separador de Ambiente
+naive-estacional,79.17,308.33,150.0,10,36.0,producto,semanal,315571.44,Separador de Ambiente
+media-movil-8,165.83,70.4,41.81,11,37.0,producto,semanal,9019739.37,Perfil H Grey
+naive-estacional,190.55,104.75,50.15,11,37.0,producto,semanal,9019739.37,Perfil H Grey
+media-movil-8,128.54,169.28,101.42,11,38.0,producto,semanal,3283336.14,Perfil H Gold
+naive-estacional,134.78,149.09,63.56,11,38.0,producto,semanal,3283336.14,Perfil H Gold
+media-movil-8,105.02,125.44,89.22,6,39.0,producto,semanal,1568285.62,Perfil E Grey
+naive-estacional,105.02,125.44,89.22,6,39.0,producto,semanal,1568285.62,Perfil E Grey
+media-movil-8,61.94,302.67,250.62,6,40.0,producto,semanal,381588.22,Perfil E Gold
+naive-estacional,61.94,302.67,250.62,6,40.0,producto,semanal,381588.22,Perfil E Gold
+media-movil-8,67.55,307.42,227.4,4,41.0,producto,semanal,815899.14,Perfil ITSPANEL V Cipres
+naive-estacional,67.55,307.42,227.4,4,41.0,producto,semanal,815899.14,Perfil ITSPANEL V Cipres
+media-movil-8,34.94,587.02,502.88,3,42.0,producto,semanal,0.0,Perfil ITSPANEL V Alerce
+naive-estacional,34.94,587.02,502.88,3,42.0,producto,semanal,0.0,Perfil ITSPANEL V Alerce
+media-movil-8,70.6,329.14,214.44,3,44.0,producto,semanal,483495.8,Perfil ITSPANEL V Negro
+naive-estacional,70.6,329.14,214.44,3,44.0,producto,semanal,483495.8,Perfil ITSPANEL V Negro
+media-movil-8,75.67,105.56,66.67,2,45.0,producto,semanal,241747.89,Perfil ITSPANEL V Blanco
+naive-estacional,75.67,105.56,66.67,2,45.0,producto,semanal,241747.89,Perfil ITSPANEL V Blanco
+media-movil-8,346.16,4323.84,4294.11,4,46.0,producto,semanal,3157831.92,Perfil ITSPANEL J Cipres
+naive-estacional,346.16,4323.84,4294.11,4,46.0,producto,semanal,3157831.92,Perfil ITSPANEL J Cipres
+media-movil-8,100.0,100.0,100.0,3,47.0,producto,semanal,997210.07,Perfil ITSPANEL J Alerce
+naive-estacional,100.0,100.0,100.0,3,47.0,producto,semanal,997210.07,Perfil ITSPANEL J Alerce
+media-movil-8,,,,3,49.0,producto,semanal,808344.54,Perfil ITSPANEL J Negro
+naive-estacional,,,,3,49.0,producto,semanal,808344.54,Perfil ITSPANEL J Negro
+media-movil-8,256.26,2786.55,2771.85,3,50.0,producto,semanal,793235.31,Perfil ITSPANEL J Blanco
+naive-estacional,256.26,2786.55,2771.85,3,50.0,producto,semanal,793235.31,Perfil ITSPANEL J Blanco
+media-movil-8,116.88,70.49,35.93,11,59.0,producto,semanal,5955284.18,Clip de montaje
+naive-estacional,88.0,74.71,46.26,11,59.0,producto,semanal,5955284.18,Clip de montaje
+media-movil-8,127.34,84.92,45.04,11,60.0,producto,semanal,8719823.7,No Clavo
+naive-estacional,110.47,85.22,38.59,11,60.0,producto,semanal,8719823.7,No Clavo
+media-movil-8,75.72,61.28,27.22,11,61.0,producto,semanal,7650957.93,Fix All
+naive-estacional,84.87,67.97,42.76,11,61.0,producto,semanal,7650957.93,Fix All
+media-movil-8,64.69,67.19,41.19,11,62.0,producto,semanal,6114588.47,Galon no Clavo
+naive-estacional,69.0,103.29,65.38,11,62.0,producto,semanal,6114588.47,Galon no Clavo
+media-movil-8,81.25,287.5,125.0,11,63.0,producto,semanal,2389310.9,2x3
+naive-estacional,50.0,675.0,575.0,11,63.0,producto,semanal,2389310.9,2x3
+media-movil-8,,,,11,64.0,producto,semanal,1648815.14,Terraza 4'
+naive-estacional,,,,11,64.0,producto,semanal,1648815.14,Terraza 4'
+media-movil-8,,,,11,65.0,producto,semanal,11164857.03,Lana de Vidrio
+naive-estacional,,,,11,65.0,producto,semanal,11164857.03,Lana de Vidrio
+media-movil-8,91.85,219.71,112.99,11,66.0,producto,semanal,20981890.72,Rollete 96
+naive-estacional,93.33,454.25,325.65,11,66.0,producto,semanal,20981890.72,Rollete 96
