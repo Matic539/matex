@@ -21,6 +21,7 @@ Uso:
 import argparse
 import logging
 import sys
+import warnings
 from pathlib import Path
 
 import numpy as np
@@ -62,7 +63,9 @@ def evaluar_serie(q: np.ndarray, gran: str) -> list[dict]:
         if len(filas) < MIN_HISTORIA:
             continue
         arr = np.array(filas, dtype=float)
-        with np.errstate(invalid="ignore"):
+        with np.errstate(invalid="ignore"), warnings.catch_warnings():
+            # series con validación toda en cero producen folds NaN → media NaN, es esperado
+            warnings.simplefilter("ignore", category=RuntimeWarning)
             m = np.nanmean(arr, axis=0)
         outs.append({"modelo": nombre, "mape": m[0], "wape": m[1],
                      "mape_acum": m[2], "n_folds": len(filas)})

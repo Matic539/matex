@@ -1,0 +1,8 @@
+modelo,M1,M2_mediana,M3_mediana,skill_mediano_pct,n_series
+media-movil-8,99.3,102.7,150.7,,13
+naive-estacional,61.8,61.0,139.1,,13
+ets-damped,81.6,70.1,128.2,,13
+croston-sba,,121.3,159.3,,7
+lgbm-global,,92.9,128.7,,13
+sarima-111-011-12,114.9,,,,0
+_torneo(mejor por serie)_,60.8,57.4,103.6,11.0,13

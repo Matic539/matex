@@ -67,11 +67,14 @@ export async function dashboard(dias: number) {
     GROUP BY dp.categoria
     ORDER BY monto DESC`;
 
-  // Alertas en vivo desde operacional (no dependen del refresh)
+  // Alertas en vivo desde operacional (no dependen del refresh);
+  // solo productos activos
   const [alertas] = await prisma.$queryRaw<{ n: number }[]>`
     SELECT COUNT(*)::int AS n
-    FROM operacional.v_stock_actual
-    WHERE stock_actual < stock_minimo`;
+    FROM operacional.v_stock_actual s
+    JOIN operacional.producto p ON p.id = s.producto_id
+    WHERE s.stock_actual < s.stock_minimo
+      AND p.activo`;
 
   return {
     periodoDias: dias,
@@ -157,29 +160,63 @@ export async function ventasPorCategoria(desde?: Date, hasta?: Date) {
     ORDER BY dt.anio, dt.mes, monto DESC`;
 }
 
-// ── 4.4 Proyección de stock (RF-27, provisional sin ML) ───────
-// Promedio móvil de ventas de los últimos `ventanaDias` → días de
-// cobertura y sugerencia de reposición. Este endpoint define el contrato
-// que luego implementará el módulo predictivo (RF-22/23) sin tocar la UI.
-export async function proyeccionStock(ventanaDias: number, horizonteDias: number) {
+// ── 4.4 Proyección de stock (RF-27) ───────────────────────────
+// Degradación elegante (PDP-02 P5.2): si el pipeline predictivo dejó una
+// corrida vigente, la proyección usa la demanda PREVISTA por el modelo
+// (analytics.v_cobertura_stock); si no, cae al promedio móvil original.
+// El contrato de salida no cambia; se agrega el campo `fuente`.
+interface FilaProyeccion {
+  productoId: number;
+  codigo: string;
+  nombre: string;
+  categoria: string;
+  stock_actual: number;
+  stock_minimo: number;
+  venta_diaria_promedio: number;
+  dias_cobertura: number | null;
+  sugerencia_reposicion: number;
+  fuente: 'modelo' | 'promedio_movil';
+}
+
+export async function proyeccionStock(
+  ventanaDias: number,
+  horizonteDias: number,
+): Promise<FilaProyeccion[]> {
+  const desdeModelo = await prisma.$queryRaw<FilaProyeccion[]>`
+    SELECT v.producto_id                                    AS "productoId",
+           v.codigo,
+           v.nombre,
+           v.categoria,
+           v.stock_actual::float8                           AS stock_actual,
+           v.stock_minimo::float8                           AS stock_minimo,
+           (COALESCE(v.demanda_prevista_4sem, 0) / 28.0)::float8 AS venta_diaria_promedio,
+           v.dias_cobertura::float8                         AS dias_cobertura,
+           GREATEST(
+             0,
+             CEIL((COALESCE(v.demanda_prevista_4sem, 0) / 28.0) * ${horizonteDias}::float8
+                  + v.stock_minimo - v.stock_actual)
+           )::float8                                        AS sugerencia_reposicion,
+           'modelo'::text                                   AS fuente
+    FROM analytics.v_cobertura_stock v
+    WHERE v.demanda_prevista_4sem IS NOT NULL
+    ORDER BY v.fecha_quiebre_pesimista ASC NULLS LAST, v.nombre
+    LIMIT 200`;
+
+  // Predicción vigente disponible → RF-27 servido por el modelo (RF-22/23)
+  if (desdeModelo.length > 0) return desdeModelo;
+
+  return proyeccionPromedioMovil(ventanaDias, horizonteDias);
+}
+
+// Implementación original (baseline promedio móvil) — se conserva como
+// fallback y como referencia de comparación del modelo (RP2-01).
+async function proyeccionPromedioMovil(ventanaDias: number, horizonteDias: number) {
   const hasta = new Date();
   const desde = new Date(hasta.getTime() - (ventanaDias - 1) * 24 * 60 * 60 * 1000);
   const desdeId = aFechaId(desde);
   const hastaId = aFechaId(hasta);
 
-  return prisma.$queryRaw<
-    {
-      productoId: number;
-      codigo: string;
-      nombre: string;
-      categoria: string;
-      stock_actual: number;
-      stock_minimo: number;
-      venta_diaria_promedio: number;
-      dias_cobertura: number | null;
-      sugerencia_reposicion: number;
-    }[]
-  >`
+  return prisma.$queryRaw<FilaProyeccion[]>`
     WITH ventas_ventana AS (
       SELECT producto_id, SUM(cantidad) AS unidades
       FROM analytics.fact_ventas
@@ -200,7 +237,8 @@ export async function proyeccionStock(ventanaDias: number, horizonteDias: number
              0,
              CEIL((COALESCE(vv.unidades, 0) / ${ventanaDias}::float8) * ${horizonteDias}::float8
                   - sa.stock_actual)
-           )::float8                                        AS sugerencia_reposicion
+           )::float8                                        AS sugerencia_reposicion,
+           'promedio_movil'::text                           AS fuente
     FROM operacional.v_stock_actual sa
     JOIN analytics.dim_producto dp ON dp.producto_id = sa.producto_id
     LEFT JOIN ventas_ventana vv ON vv.producto_id = sa.producto_id

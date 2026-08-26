@@ -1,0 +1,692 @@
+serie_id,nombre,clase,modelo,ventana,error_semanas
+1.0,SPC DARK,A,ets-damped,4,1
+1.0,SPC DARK,A,ets-damped,8,2
+1.0,SPC DARK,A,ets-damped,4,2
+1.0,SPC DARK,A,ets-damped,8,0
+1.0,SPC DARK,A,ets-damped,4,3
+1.0,SPC DARK,A,ets-damped,8,1
+1.0,SPC DARK,A,ets-damped,4,1
+1.0,SPC DARK,A,ets-damped,8,0
+1.0,SPC DARK,A,ets-damped,4,2
+1.0,SPC DARK,A,ets-damped,8,4
+1.0,SPC DARK,A,ets-damped,4,8
+1.0,SPC DARK,A,ets-damped,8,4
+1.0,SPC DARK,A,ets-damped,4,2
+1.0,SPC DARK,A,ets-damped,8,2
+1.0,SPC DARK,A,ets-damped,4,3
+1.0,SPC DARK,A,ets-damped,8,7
+1.0,SPC DARK,A,ets-damped,8,4
+1.0,SPC DARK,A,ets-damped,4,8
+1.0,SPC DARK,A,ets-damped,8,4
+1.0,SPC DARK,A,ets-damped,4,2
+1.0,SPC DARK,A,ets-damped,8,4
+2.0,SPC MEDIUM,A,ets-damped,4,8
+2.0,SPC MEDIUM,A,ets-damped,8,4
+2.0,SPC MEDIUM,A,ets-damped,4,1
+2.0,SPC MEDIUM,A,ets-damped,8,1
+2.0,SPC MEDIUM,A,ets-damped,4,2
+2.0,SPC MEDIUM,A,ets-damped,8,4
+2.0,SPC MEDIUM,A,ets-damped,4,3
+2.0,SPC MEDIUM,A,ets-damped,8,1
+2.0,SPC MEDIUM,A,ets-damped,4,3
+2.0,SPC MEDIUM,A,ets-damped,8,4
+2.0,SPC MEDIUM,A,ets-damped,4,8
+2.0,SPC MEDIUM,A,ets-damped,8,4
+2.0,SPC MEDIUM,A,ets-damped,4,3
+2.0,SPC MEDIUM,A,ets-damped,8,4
+2.0,SPC MEDIUM,A,ets-damped,4,1
+2.0,SPC MEDIUM,A,ets-damped,8,3
+2.0,SPC MEDIUM,A,ets-damped,4,3
+2.0,SPC MEDIUM,A,ets-damped,8,2
+2.0,SPC MEDIUM,A,ets-damped,4,0
+2.0,SPC MEDIUM,A,ets-damped,8,4
+2.0,SPC MEDIUM,A,ets-damped,4,6
+2.0,SPC MEDIUM,A,ets-damped,8,3
+3.0,SPC GREY,A,ets-damped,4,5
+3.0,SPC GREY,A,ets-damped,8,4
+3.0,SPC GREY,A,ets-damped,4,0
+3.0,SPC GREY,A,ets-damped,8,2
+3.0,SPC GREY,A,ets-damped,4,2
+3.0,SPC GREY,A,ets-damped,8,0
+3.0,SPC GREY,A,ets-damped,4,1
+3.0,SPC GREY,A,ets-damped,8,4
+3.0,SPC GREY,A,ets-damped,4,8
+3.0,SPC GREY,A,ets-damped,8,4
+3.0,SPC GREY,A,ets-damped,4,6
+3.0,SPC GREY,A,ets-damped,8,4
+3.0,SPC GREY,A,ets-damped,4,1
+3.0,SPC GREY,A,ets-damped,8,3
+3.0,SPC GREY,A,ets-damped,8,5
+3.0,SPC GREY,A,ets-damped,4,1
+3.0,SPC GREY,A,ets-damped,8,4
+3.0,SPC GREY,A,ets-damped,4,8
+3.0,SPC GREY,A,ets-damped,8,4
+4.0,Terc Estr 15mm,A,ets-damped,4,2
+4.0,Terc Estr 15mm,A,ets-damped,8,6
+4.0,Terc Estr 15mm,A,ets-damped,4,0
+4.0,Terc Estr 15mm,A,ets-damped,8,1
+4.0,Terc Estr 15mm,A,ets-damped,4,8
+4.0,Terc Estr 15mm,A,ets-damped,8,4
+4.0,Terc Estr 15mm,A,ets-damped,4,4
+4.0,Terc Estr 15mm,A,ets-damped,8,3
+4.0,Terc Estr 15mm,A,ets-damped,4,2
+4.0,Terc Estr 15mm,A,ets-damped,8,2
+4.0,Terc Estr 15mm,A,ets-damped,4,6
+4.0,Terc Estr 15mm,A,ets-damped,8,4
+4.0,Terc Estr 15mm,A,ets-damped,4,3
+4.0,Terc Estr 15mm,A,ets-damped,8,7
+4.0,Terc Estr 15mm,A,ets-damped,8,4
+4.0,Terc Estr 15mm,A,ets-damped,4,8
+4.0,Terc Estr 15mm,A,ets-damped,8,4
+4.0,Terc Estr 15mm,A,ets-damped,4,8
+4.0,Terc Estr 15mm,A,ets-damped,8,4
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,4,5
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,1
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,4,1
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,4
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,4,8
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,4
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,4
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,4,8
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,4
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,4
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,4,7
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,4
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,4,3
+5.0,Terc Estr 15mm 2da,BC,naive-estacional,8,1
+6.0,Terc Estr 18mm N,A,lgbm-global,8,4
+6.0,Terc Estr 18mm N,A,lgbm-global,4,8
+6.0,Terc Estr 18mm N,A,lgbm-global,8,4
+6.0,Terc Estr 18mm N,A,lgbm-global,4,8
+6.0,Terc Estr 18mm N,A,lgbm-global,8,4
+6.0,Terc Estr 18mm N,A,lgbm-global,4,2
+6.0,Terc Estr 18mm N,A,lgbm-global,8,2
+6.0,Terc Estr 18mm N,A,lgbm-global,8,2
+6.0,Terc Estr 18mm N,A,lgbm-global,4,8
+6.0,Terc Estr 18mm N,A,lgbm-global,8,4
+6.0,Terc Estr 18mm N,A,lgbm-global,4,2
+6.0,Terc Estr 18mm N,A,lgbm-global,8,6
+6.0,Terc Estr 18mm N,A,lgbm-global,4,3
+6.0,Terc Estr 18mm N,A,lgbm-global,8,7
+7.0,Terc Estr 18mm 2da,BC,media-movil-8,8,4
+7.0,Terc Estr 18mm 2da,BC,media-movil-8,4,8
+7.0,Terc Estr 18mm 2da,BC,media-movil-8,8,4
+7.0,Terc Estr 18mm 2da,BC,media-movil-8,8,4
+7.0,Terc Estr 18mm 2da,BC,media-movil-8,4,8
+7.0,Terc Estr 18mm 2da,BC,media-movil-8,8,4
+10.0,PANEL CIPRES,A,lgbm-global,4,6
+10.0,PANEL CIPRES,A,lgbm-global,8,4
+10.0,PANEL CIPRES,A,lgbm-global,4,2
+10.0,PANEL CIPRES,A,lgbm-global,8,1
+10.0,PANEL CIPRES,A,lgbm-global,4,5
+10.0,PANEL CIPRES,A,lgbm-global,8,4
+10.0,PANEL CIPRES,A,lgbm-global,4,1
+10.0,PANEL CIPRES,A,lgbm-global,8,0
+10.0,PANEL CIPRES,A,lgbm-global,4,2
+10.0,PANEL CIPRES,A,lgbm-global,8,4
+10.0,PANEL CIPRES,A,lgbm-global,4,3
+10.0,PANEL CIPRES,A,lgbm-global,8,2
+10.0,PANEL CIPRES,A,lgbm-global,4,2
+10.0,PANEL CIPRES,A,lgbm-global,8,1
+10.0,PANEL CIPRES,A,lgbm-global,4,5
+10.0,PANEL CIPRES,A,lgbm-global,8,4
+10.0,PANEL CIPRES,A,lgbm-global,4,1
+10.0,PANEL CIPRES,A,lgbm-global,8,4
+10.0,PANEL CIPRES,A,lgbm-global,4,3
+10.0,PANEL CIPRES,A,lgbm-global,8,2
+10.0,PANEL CIPRES,A,lgbm-global,4,1
+10.0,PANEL CIPRES,A,lgbm-global,8,3
+11.0,PANEL BLACK,A,lgbm-global,4,1
+11.0,PANEL BLACK,A,lgbm-global,8,5
+11.0,PANEL BLACK,A,lgbm-global,4,3
+11.0,PANEL BLACK,A,lgbm-global,8,7
+11.0,PANEL BLACK,A,lgbm-global,4,3
+11.0,PANEL BLACK,A,lgbm-global,8,7
+11.0,PANEL BLACK,A,lgbm-global,8,7
+11.0,PANEL BLACK,A,lgbm-global,4,3
+11.0,PANEL BLACK,A,lgbm-global,8,4
+11.0,PANEL BLACK,A,lgbm-global,4,1
+11.0,PANEL BLACK,A,lgbm-global,8,4
+11.0,PANEL BLACK,A,lgbm-global,4,8
+11.0,PANEL BLACK,A,lgbm-global,8,4
+11.0,PANEL BLACK,A,lgbm-global,4,0
+11.0,PANEL BLACK,A,lgbm-global,8,4
+11.0,PANEL BLACK,A,lgbm-global,8,7
+11.0,PANEL BLACK,A,lgbm-global,4,3
+11.0,PANEL BLACK,A,lgbm-global,8,7
+12.0,PANEL NEW BLACK,BC,media-movil-8,8,4
+12.0,PANEL NEW BLACK,BC,media-movil-8,4,8
+12.0,PANEL NEW BLACK,BC,media-movil-8,8,4
+12.0,PANEL NEW BLACK,BC,media-movil-8,4,5
+12.0,PANEL NEW BLACK,BC,media-movil-8,8,1
+13.0,PANEL GREY,A,lgbm-global,4,2
+13.0,PANEL GREY,A,lgbm-global,8,6
+13.0,PANEL GREY,A,lgbm-global,4,3
+13.0,PANEL GREY,A,lgbm-global,8,5
+13.0,PANEL GREY,A,lgbm-global,4,1
+13.0,PANEL GREY,A,lgbm-global,8,4
+13.0,PANEL GREY,A,lgbm-global,4,8
+13.0,PANEL GREY,A,lgbm-global,8,4
+13.0,PANEL GREY,A,lgbm-global,8,7
+13.0,PANEL GREY,A,lgbm-global,4,3
+13.0,PANEL GREY,A,lgbm-global,8,6
+13.0,PANEL GREY,A,lgbm-global,4,2
+13.0,PANEL GREY,A,lgbm-global,8,4
+13.0,PANEL GREY,A,lgbm-global,4,8
+13.0,PANEL GREY,A,lgbm-global,8,4
+13.0,PANEL GREY,A,lgbm-global,4,4
+13.0,PANEL GREY,A,lgbm-global,8,4
+13.0,PANEL GREY,A,lgbm-global,4,6
+13.0,PANEL GREY,A,lgbm-global,8,4
+13.0,PANEL GREY,A,lgbm-global,4,1
+13.0,PANEL GREY,A,lgbm-global,8,2
+14.0,PANEL ALERCE,A,lgbm-global,4,3
+14.0,PANEL ALERCE,A,lgbm-global,8,2
+14.0,PANEL ALERCE,A,lgbm-global,4,2
+14.0,PANEL ALERCE,A,lgbm-global,8,2
+14.0,PANEL ALERCE,A,lgbm-global,4,1
+14.0,PANEL ALERCE,A,lgbm-global,8,3
+14.0,PANEL ALERCE,A,lgbm-global,8,6
+14.0,PANEL ALERCE,A,lgbm-global,4,2
+14.0,PANEL ALERCE,A,lgbm-global,8,4
+14.0,PANEL ALERCE,A,lgbm-global,4,8
+14.0,PANEL ALERCE,A,lgbm-global,8,4
+14.0,PANEL ALERCE,A,lgbm-global,4,8
+14.0,PANEL ALERCE,A,lgbm-global,8,4
+14.0,PANEL ALERCE,A,lgbm-global,4,3
+14.0,PANEL ALERCE,A,lgbm-global,8,2
+14.0,PANEL ALERCE,A,lgbm-global,4,1
+14.0,PANEL ALERCE,A,lgbm-global,8,3
+14.0,PANEL ALERCE,A,lgbm-global,4,4
+14.0,PANEL ALERCE,A,lgbm-global,8,4
+14.0,PANEL ALERCE,A,lgbm-global,4,0
+14.0,PANEL ALERCE,A,lgbm-global,8,1
+16.0,ELM Light Claro,A,lgbm-global,4,8
+16.0,ELM Light Claro,A,lgbm-global,8,4
+16.0,ELM Light Claro,A,lgbm-global,4,0
+16.0,ELM Light Claro,A,lgbm-global,8,2
+16.0,ELM Light Claro,A,lgbm-global,4,2
+16.0,ELM Light Claro,A,lgbm-global,8,0
+16.0,ELM Light Claro,A,lgbm-global,4,2
+16.0,ELM Light Claro,A,lgbm-global,8,5
+16.0,ELM Light Claro,A,lgbm-global,4,0
+16.0,ELM Light Claro,A,lgbm-global,8,4
+16.0,ELM Light Claro,A,lgbm-global,4,3
+16.0,ELM Light Claro,A,lgbm-global,8,4
+16.0,ELM Light Claro,A,lgbm-global,4,1
+16.0,ELM Light Claro,A,lgbm-global,8,0
+16.0,ELM Light Claro,A,lgbm-global,4,2
+16.0,ELM Light Claro,A,lgbm-global,8,1
+16.0,ELM Light Claro,A,lgbm-global,4,1
+16.0,ELM Light Claro,A,lgbm-global,8,3
+16.0,ELM Light Claro,A,lgbm-global,4,0
+16.0,ELM Light Claro,A,lgbm-global,8,1
+16.0,ELM Light Claro,A,lgbm-global,4,2
+16.0,ELM Light Claro,A,lgbm-global,8,4
+17.0,ELM Grey,BC,lgbm-global,4,2
+17.0,ELM Grey,BC,lgbm-global,8,5
+17.0,ELM Grey,BC,lgbm-global,4,3
+17.0,ELM Grey,BC,lgbm-global,8,6
+17.0,ELM Grey,BC,lgbm-global,4,3
+17.0,ELM Grey,BC,lgbm-global,8,4
+17.0,ELM Grey,BC,lgbm-global,4,0
+17.0,ELM Grey,BC,lgbm-global,8,3
+17.0,ELM Grey,BC,lgbm-global,4,3
+17.0,ELM Grey,BC,lgbm-global,8,3
+17.0,ELM Grey,BC,lgbm-global,4,4
+17.0,ELM Grey,BC,lgbm-global,8,4
+17.0,ELM Grey,BC,lgbm-global,4,1
+17.0,ELM Grey,BC,lgbm-global,8,3
+17.0,ELM Grey,BC,lgbm-global,8,7
+17.0,ELM Grey,BC,lgbm-global,4,2
+17.0,ELM Grey,BC,lgbm-global,8,5
+17.0,ELM Grey,BC,lgbm-global,4,2
+17.0,ELM Grey,BC,lgbm-global,8,5
+17.0,ELM Grey,BC,lgbm-global,4,3
+17.0,ELM Grey,BC,lgbm-global,8,3
+18.0,ELM AGED,BC,lgbm-global,8,6
+18.0,ELM AGED,BC,lgbm-global,4,1
+18.0,ELM AGED,BC,lgbm-global,8,4
+18.0,ELM AGED,BC,lgbm-global,4,8
+18.0,ELM AGED,BC,lgbm-global,8,4
+18.0,ELM AGED,BC,lgbm-global,4,3
+18.0,ELM AGED,BC,lgbm-global,8,4
+18.0,ELM AGED,BC,lgbm-global,4,0
+18.0,ELM AGED,BC,lgbm-global,8,1
+18.0,ELM AGED,BC,lgbm-global,4,2
+18.0,ELM AGED,BC,lgbm-global,8,2
+18.0,ELM AGED,BC,lgbm-global,4,1
+18.0,ELM AGED,BC,lgbm-global,8,2
+18.0,ELM AGED,BC,lgbm-global,4,1
+18.0,ELM AGED,BC,lgbm-global,8,1
+18.0,ELM AGED,BC,lgbm-global,4,2
+18.0,ELM AGED,BC,lgbm-global,8,2
+18.0,ELM AGED,BC,lgbm-global,4,0
+18.0,ELM AGED,BC,lgbm-global,8,1
+18.0,ELM AGED,BC,lgbm-global,4,1
+18.0,ELM AGED,BC,lgbm-global,8,0
+19.0,ELM Black,BC,lgbm-global,4,2
+19.0,ELM Black,BC,lgbm-global,8,6
+19.0,ELM Black,BC,lgbm-global,4,3
+19.0,ELM Black,BC,lgbm-global,8,7
+19.0,ELM Black,BC,lgbm-global,8,0
+19.0,ELM Black,BC,lgbm-global,4,8
+19.0,ELM Black,BC,lgbm-global,8,4
+19.0,ELM Black,BC,lgbm-global,4,6
+19.0,ELM Black,BC,lgbm-global,8,2
+19.0,ELM Black,BC,lgbm-global,8,6
+19.0,ELM Black,BC,lgbm-global,4,2
+19.0,ELM Black,BC,lgbm-global,8,4
+21.0,T1-11 Cherry,BC,lgbm-global,8,4
+21.0,T1-11 Cherry,BC,lgbm-global,4,8
+21.0,T1-11 Cherry,BC,lgbm-global,8,4
+21.0,T1-11 Cherry,BC,lgbm-global,4,0
+21.0,T1-11 Cherry,BC,lgbm-global,8,0
+21.0,T1-11 Cherry,BC,lgbm-global,4,1
+21.0,T1-11 Cherry,BC,lgbm-global,8,4
+21.0,T1-11 Cherry,BC,lgbm-global,4,8
+21.0,T1-11 Cherry,BC,lgbm-global,8,4
+21.0,T1-11 Cherry,BC,lgbm-global,4,0
+21.0,T1-11 Cherry,BC,lgbm-global,8,1
+21.0,T1-11 Cherry,BC,lgbm-global,4,3
+21.0,T1-11 Cherry,BC,lgbm-global,8,4
+21.0,T1-11 Cherry,BC,lgbm-global,4,1
+21.0,T1-11 Cherry,BC,lgbm-global,8,2
+21.0,T1-11 Cherry,BC,lgbm-global,4,3
+21.0,T1-11 Cherry,BC,lgbm-global,8,5
+21.0,T1-11 Cherry,BC,lgbm-global,4,1
+21.0,T1-11 Cherry,BC,lgbm-global,8,3
+21.0,T1-11 Cherry,BC,lgbm-global,4,1
+21.0,T1-11 Cherry,BC,lgbm-global,8,5
+22.0,T1-11 Dark,BC,naive-estacional,4,3
+22.0,T1-11 Dark,BC,naive-estacional,8,5
+22.0,T1-11 Dark,BC,naive-estacional,4,1
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,6
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,8
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,1
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,8
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,4
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,8
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,1
+22.0,T1-11 Dark,BC,naive-estacional,8,1
+22.0,T1-11 Dark,BC,naive-estacional,4,0
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+22.0,T1-11 Dark,BC,naive-estacional,4,8
+22.0,T1-11 Dark,BC,naive-estacional,8,4
+23.0,T1-11 Light,BC,lgbm-global,8,4
+23.0,T1-11 Light,BC,lgbm-global,4,8
+23.0,T1-11 Light,BC,lgbm-global,8,4
+23.0,T1-11 Light,BC,lgbm-global,4,8
+23.0,T1-11 Light,BC,lgbm-global,8,4
+23.0,T1-11 Light,BC,lgbm-global,4,8
+23.0,T1-11 Light,BC,lgbm-global,8,4
+23.0,T1-11 Light,BC,lgbm-global,4,2
+23.0,T1-11 Light,BC,lgbm-global,8,1
+24.0,WALL tex blanco,BC,lgbm-global,4,2
+24.0,WALL tex blanco,BC,lgbm-global,8,5
+24.0,WALL tex blanco,BC,lgbm-global,4,8
+24.0,WALL tex blanco,BC,lgbm-global,8,4
+25.0,WALL tex café,BC,lgbm-global,8,2
+25.0,WALL tex café,BC,lgbm-global,4,4
+25.0,WALL tex café,BC,lgbm-global,8,0
+25.0,WALL tex café,BC,lgbm-global,8,3
+25.0,WALL tex café,BC,lgbm-global,4,8
+25.0,WALL tex café,BC,lgbm-global,8,4
+25.0,WALL tex café,BC,lgbm-global,4,6
+25.0,WALL tex café,BC,lgbm-global,8,4
+25.0,WALL tex café,BC,lgbm-global,4,1
+25.0,WALL tex café,BC,lgbm-global,8,4
+25.0,WALL tex café,BC,lgbm-global,4,7
+25.0,WALL tex café,BC,lgbm-global,8,4
+25.0,WALL tex café,BC,lgbm-global,4,3
+25.0,WALL tex café,BC,lgbm-global,8,3
+25.0,WALL tex café,BC,lgbm-global,4,0
+25.0,WALL tex café,BC,lgbm-global,8,2
+25.0,WALL tex café,BC,lgbm-global,4,2
+25.0,WALL tex café,BC,lgbm-global,8,6
+26.0,Marmolisima Blanca,A,ets-damped,4,2
+26.0,Marmolisima Blanca,A,ets-damped,8,3
+26.0,Marmolisima Blanca,A,ets-damped,4,1
+26.0,Marmolisima Blanca,A,ets-damped,8,2
+26.0,Marmolisima Blanca,A,ets-damped,4,1
+26.0,Marmolisima Blanca,A,ets-damped,8,2
+26.0,Marmolisima Blanca,A,ets-damped,4,0
+26.0,Marmolisima Blanca,A,ets-damped,8,0
+26.0,Marmolisima Blanca,A,ets-damped,4,1
+26.0,Marmolisima Blanca,A,ets-damped,8,3
+26.0,Marmolisima Blanca,A,ets-damped,4,2
+26.0,Marmolisima Blanca,A,ets-damped,8,3
+26.0,Marmolisima Blanca,A,ets-damped,4,1
+26.0,Marmolisima Blanca,A,ets-damped,8,0
+26.0,Marmolisima Blanca,A,ets-damped,4,1
+26.0,Marmolisima Blanca,A,ets-damped,8,1
+26.0,Marmolisima Blanca,A,ets-damped,4,1
+26.0,Marmolisima Blanca,A,ets-damped,8,0
+26.0,Marmolisima Blanca,A,ets-damped,4,0
+26.0,Marmolisima Blanca,A,ets-damped,8,2
+26.0,Marmolisima Blanca,A,ets-damped,4,1
+26.0,Marmolisima Blanca,A,ets-damped,8,3
+27.0,Marmolisima Gris,A,lgbm-global,4,6
+27.0,Marmolisima Gris,A,lgbm-global,8,4
+27.0,Marmolisima Gris,A,lgbm-global,4,6
+27.0,Marmolisima Gris,A,lgbm-global,8,4
+27.0,Marmolisima Gris,A,lgbm-global,4,0
+27.0,Marmolisima Gris,A,lgbm-global,8,0
+27.0,Marmolisima Gris,A,lgbm-global,4,0
+27.0,Marmolisima Gris,A,lgbm-global,8,4
+27.0,Marmolisima Gris,A,lgbm-global,4,8
+27.0,Marmolisima Gris,A,lgbm-global,8,4
+27.0,Marmolisima Gris,A,lgbm-global,4,2
+27.0,Marmolisima Gris,A,lgbm-global,8,5
+27.0,Marmolisima Gris,A,lgbm-global,4,3
+27.0,Marmolisima Gris,A,lgbm-global,8,6
+27.0,Marmolisima Gris,A,lgbm-global,4,2
+27.0,Marmolisima Gris,A,lgbm-global,8,0
+27.0,Marmolisima Gris,A,lgbm-global,4,5
+27.0,Marmolisima Gris,A,lgbm-global,8,3
+27.0,Marmolisima Gris,A,lgbm-global,4,2
+27.0,Marmolisima Gris,A,lgbm-global,8,4
+27.0,Marmolisima Gris,A,lgbm-global,4,0
+27.0,Marmolisima Gris,A,lgbm-global,8,1
+28.0,Marmolisima Travertino,BC,lgbm-global,8,6
+28.0,Marmolisima Travertino,BC,lgbm-global,4,0
+28.0,Marmolisima Travertino,BC,lgbm-global,8,2
+28.0,Marmolisima Travertino,BC,lgbm-global,4,1
+28.0,Marmolisima Travertino,BC,lgbm-global,8,4
+28.0,Marmolisima Travertino,BC,lgbm-global,4,8
+28.0,Marmolisima Travertino,BC,lgbm-global,8,4
+28.0,Marmolisima Travertino,BC,lgbm-global,4,3
+28.0,Marmolisima Travertino,BC,lgbm-global,8,2
+28.0,Marmolisima Travertino,BC,lgbm-global,4,4
+28.0,Marmolisima Travertino,BC,lgbm-global,8,4
+28.0,Marmolisima Travertino,BC,lgbm-global,4,8
+28.0,Marmolisima Travertino,BC,lgbm-global,8,4
+28.0,Marmolisima Travertino,BC,lgbm-global,4,4
+28.0,Marmolisima Travertino,BC,lgbm-global,8,2
+28.0,Marmolisima Travertino,BC,lgbm-global,4,2
+28.0,Marmolisima Travertino,BC,lgbm-global,8,4
+28.0,Marmolisima Travertino,BC,lgbm-global,4,1
+28.0,Marmolisima Travertino,BC,lgbm-global,8,4
+29.0,Marmolisima Negra,BC,ets-damped,8,7
+29.0,Marmolisima Negra,BC,ets-damped,4,2
+29.0,Marmolisima Negra,BC,ets-damped,8,1
+29.0,Marmolisima Negra,BC,ets-damped,4,4
+29.0,Marmolisima Negra,BC,ets-damped,8,1
+29.0,Marmolisima Negra,BC,ets-damped,4,3
+29.0,Marmolisima Negra,BC,ets-damped,8,4
+29.0,Marmolisima Negra,BC,ets-damped,4,8
+29.0,Marmolisima Negra,BC,ets-damped,8,4
+29.0,Marmolisima Negra,BC,ets-damped,4,2
+29.0,Marmolisima Negra,BC,ets-damped,8,4
+29.0,Marmolisima Negra,BC,ets-damped,4,1
+29.0,Marmolisima Negra,BC,ets-damped,8,4
+29.0,Marmolisima Negra,BC,ets-damped,4,2
+29.0,Marmolisima Negra,BC,ets-damped,8,6
+29.0,Marmolisima Negra,BC,ets-damped,4,3
+29.0,Marmolisima Negra,BC,ets-damped,8,6
+29.0,Marmolisima Negra,BC,ets-damped,4,3
+29.0,Marmolisima Negra,BC,ets-damped,8,4
+29.0,Marmolisima Negra,BC,ets-damped,4,0
+29.0,Marmolisima Negra,BC,ets-damped,8,3
+30.0,Marmolisima Azul,BC,ets-damped,8,5
+30.0,Marmolisima Azul,BC,ets-damped,4,8
+30.0,Marmolisima Azul,BC,ets-damped,8,4
+30.0,Marmolisima Azul,BC,ets-damped,4,8
+30.0,Marmolisima Azul,BC,ets-damped,8,4
+30.0,Marmolisima Azul,BC,ets-damped,4,0
+30.0,Marmolisima Azul,BC,ets-damped,8,4
+30.0,Marmolisima Azul,BC,ets-damped,4,8
+30.0,Marmolisima Azul,BC,ets-damped,8,4
+30.0,Marmolisima Azul,BC,ets-damped,4,1
+30.0,Marmolisima Azul,BC,ets-damped,8,4
+30.0,Marmolisima Azul,BC,ets-damped,4,8
+30.0,Marmolisima Azul,BC,ets-damped,8,4
+30.0,Marmolisima Azul,BC,ets-damped,4,3
+30.0,Marmolisima Azul,BC,ets-damped,8,6
+30.0,Marmolisima Azul,BC,ets-damped,4,3
+30.0,Marmolisima Azul,BC,ets-damped,8,3
+30.0,Marmolisima Azul,BC,ets-damped,4,1
+30.0,Marmolisima Azul,BC,ets-damped,8,2
+30.0,Marmolisima Azul,BC,ets-damped,4,2
+30.0,Marmolisima Azul,BC,ets-damped,8,6
+32.0,Marmol SPC 3mm,BC,media-movil-8,4,2
+32.0,Marmol SPC 3mm,BC,media-movil-8,8,4
+33.0,Panel White Interior,BC,lgbm-global,4,8
+33.0,Panel White Interior,BC,lgbm-global,8,4
+33.0,Panel White Interior,BC,lgbm-global,4,4
+33.0,Panel White Interior,BC,lgbm-global,8,4
+33.0,Panel White Interior,BC,lgbm-global,4,3
+33.0,Panel White Interior,BC,lgbm-global,8,0
+33.0,Panel White Interior,BC,lgbm-global,4,3
+33.0,Panel White Interior,BC,lgbm-global,8,1
+33.0,Panel White Interior,BC,lgbm-global,4,6
+33.0,Panel White Interior,BC,lgbm-global,8,2
+33.0,Panel White Interior,BC,lgbm-global,8,2
+33.0,Panel White Interior,BC,lgbm-global,4,7
+33.0,Panel White Interior,BC,lgbm-global,8,4
+33.0,Panel White Interior,BC,lgbm-global,4,1
+33.0,Panel White Interior,BC,lgbm-global,8,5
+33.0,Panel White Interior,BC,lgbm-global,8,5
+33.0,Panel White Interior,BC,lgbm-global,4,1
+33.0,Panel White Interior,BC,lgbm-global,8,2
+33.0,Panel White Interior,BC,lgbm-global,4,3
+33.0,Panel White Interior,BC,lgbm-global,8,0
+34.0,Panel Roca Light,BC,media-movil-8,8,4
+34.0,Panel Roca Light,BC,media-movil-8,4,8
+34.0,Panel Roca Light,BC,media-movil-8,8,4
+34.0,Panel Roca Light,BC,media-movil-8,8,4
+34.0,Panel Roca Light,BC,media-movil-8,4,0
+34.0,Panel Roca Light,BC,media-movil-8,8,4
+34.0,Panel Roca Light,BC,media-movil-8,4,8
+34.0,Panel Roca Light,BC,media-movil-8,8,4
+34.0,Panel Roca Light,BC,media-movil-8,4,2
+34.0,Panel Roca Light,BC,media-movil-8,8,3
+34.0,Panel Roca Light,BC,media-movil-8,4,0
+34.0,Panel Roca Light,BC,media-movil-8,8,4
+35.0,Panel Roca Black,BC,ets-damped,8,4
+35.0,Panel Roca Black,BC,ets-damped,4,8
+35.0,Panel Roca Black,BC,ets-damped,8,4
+35.0,Panel Roca Black,BC,ets-damped,4,8
+35.0,Panel Roca Black,BC,ets-damped,8,4
+35.0,Panel Roca Black,BC,ets-damped,4,8
+35.0,Panel Roca Black,BC,ets-damped,8,4
+36.0,Separador de Ambiente,BC,lgbm-global,4,8
+36.0,Separador de Ambiente,BC,lgbm-global,8,4
+36.0,Separador de Ambiente,BC,lgbm-global,4,1
+36.0,Separador de Ambiente,BC,lgbm-global,8,3
+39.0,Perfil E Grey,BC,media-movil-8,4,1
+39.0,Perfil E Grey,BC,media-movil-8,8,3
+39.0,Perfil E Grey,BC,media-movil-8,4,1
+39.0,Perfil E Grey,BC,media-movil-8,8,5
+39.0,Perfil E Grey,BC,media-movil-8,4,3
+39.0,Perfil E Grey,BC,media-movil-8,8,6
+39.0,Perfil E Grey,BC,media-movil-8,4,3
+39.0,Perfil E Grey,BC,media-movil-8,8,4
+39.0,Perfil E Grey,BC,media-movil-8,4,8
+39.0,Perfil E Grey,BC,media-movil-8,8,4
+39.0,Perfil E Grey,BC,media-movil-8,4,2
+39.0,Perfil E Grey,BC,media-movil-8,8,3
+39.0,Perfil E Grey,BC,media-movil-8,4,1
+39.0,Perfil E Grey,BC,media-movil-8,8,3
+40.0,Perfil E Gold,BC,media-movil-8,4,1
+40.0,Perfil E Gold,BC,media-movil-8,8,2
+40.0,Perfil E Gold,BC,media-movil-8,4,1
+40.0,Perfil E Gold,BC,media-movil-8,8,4
+40.0,Perfil E Gold,BC,media-movil-8,4,6
+40.0,Perfil E Gold,BC,media-movil-8,8,4
+40.0,Perfil E Gold,BC,media-movil-8,4,1
+40.0,Perfil E Gold,BC,media-movil-8,8,3
+40.0,Perfil E Gold,BC,media-movil-8,8,4
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,4,0
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,8,4
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,4,8
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,8,4
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,4,4
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,8,0
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,8,6
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,4,1
+41.0,Perfil ITSPANEL V Cipres,BC,lgbm-global,8,4
+42.0,Perfil ITSPANEL V Alerce,BC,media-movil-8,4,2
+42.0,Perfil ITSPANEL V Alerce,BC,media-movil-8,8,3
+42.0,Perfil ITSPANEL V Alerce,BC,media-movil-8,4,2
+42.0,Perfil ITSPANEL V Alerce,BC,media-movil-8,8,2
+43.0,Perfil ITSPANEL V Gris,BC,media-movil-8,4,2
+43.0,Perfil ITSPANEL V Gris,BC,media-movil-8,8,3
+44.0,Perfil ITSPANEL V Negro,BC,lgbm-global,8,0
+44.0,Perfil ITSPANEL V Negro,BC,lgbm-global,4,8
+44.0,Perfil ITSPANEL V Negro,BC,lgbm-global,8,4
+44.0,Perfil ITSPANEL V Negro,BC,lgbm-global,4,2
+44.0,Perfil ITSPANEL V Negro,BC,lgbm-global,8,6
+45.0,Perfil ITSPANEL V Blanco,BC,media-movil-8,8,4
+45.0,Perfil ITSPANEL V Blanco,BC,media-movil-8,4,8
+45.0,Perfil ITSPANEL V Blanco,BC,media-movil-8,8,4
+45.0,Perfil ITSPANEL V Blanco,BC,media-movil-8,4,8
+45.0,Perfil ITSPANEL V Blanco,BC,media-movil-8,8,4
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,4,1
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,8,2
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,4,0
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,8,0
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,4,1
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,8,2
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,4,3
+46.0,Perfil ITSPANEL J Cipres,BC,media-movil-8,8,7
+47.0,Perfil ITSPANEL J Alerce,BC,media-movil-8,4,3
+47.0,Perfil ITSPANEL J Alerce,BC,media-movil-8,8,7
+48.0,Perfil ITSPANEL J Gris,BC,media-movil-8,4,3
+48.0,Perfil ITSPANEL J Gris,BC,media-movil-8,8,7
+50.0,Perfil ITSPANEL J Blanco,BC,media-movil-8,4,3
+50.0,Perfil ITSPANEL J Blanco,BC,media-movil-8,8,6
+50.0,Perfil ITSPANEL J Blanco,BC,media-movil-8,4,4
+50.0,Perfil ITSPANEL J Blanco,BC,media-movil-8,8,4
+50.0,Perfil ITSPANEL J Blanco,BC,media-movil-8,4,8
+50.0,Perfil ITSPANEL J Blanco,BC,media-movil-8,8,4
+51.0,Perfil ITSPANEL H Gris,BC,media-movil-8,4,2
+51.0,Perfil ITSPANEL H Gris,BC,media-movil-8,8,4
+52.0,Perfil ITSPANEL H Cipres,BC,media-movil-8,4,1
+52.0,Perfil ITSPANEL H Cipres,BC,media-movil-8,8,5
+53.0,Perfil ITSPANEL H Negro,BC,media-movil-8,4,4
+53.0,Perfil ITSPANEL H Negro,BC,media-movil-8,8,4
+54.0,Perfil ITSPANEL H Alerce,BC,media-movil-8,8,6
+56.0,Perfil Inicio,BC,media-movil-8,4,1
+56.0,Perfil Inicio,BC,media-movil-8,8,3
+57.0,Perfil L WPC Light,BC,media-movil-8,4,2
+57.0,Perfil L WPC Light,BC,media-movil-8,8,3
+58.0,Perfil L WPC Aged,BC,media-movil-8,4,6
+58.0,Perfil L WPC Aged,BC,media-movil-8,8,4
+59.0,Clip de montaje,BC,lgbm-global,4,1
+59.0,Clip de montaje,BC,lgbm-global,8,1
+59.0,Clip de montaje,BC,lgbm-global,4,6
+59.0,Clip de montaje,BC,lgbm-global,8,4
+59.0,Clip de montaje,BC,lgbm-global,4,8
+59.0,Clip de montaje,BC,lgbm-global,8,4
+59.0,Clip de montaje,BC,lgbm-global,4,1
+59.0,Clip de montaje,BC,lgbm-global,8,4
+59.0,Clip de montaje,BC,lgbm-global,4,1
+59.0,Clip de montaje,BC,lgbm-global,8,1
+59.0,Clip de montaje,BC,lgbm-global,4,2
+59.0,Clip de montaje,BC,lgbm-global,8,3
+59.0,Clip de montaje,BC,lgbm-global,4,1
+59.0,Clip de montaje,BC,lgbm-global,8,4
+59.0,Clip de montaje,BC,lgbm-global,4,3
+59.0,Clip de montaje,BC,lgbm-global,8,0
+59.0,Clip de montaje,BC,lgbm-global,4,2
+59.0,Clip de montaje,BC,lgbm-global,8,3
+59.0,Clip de montaje,BC,lgbm-global,4,1
+59.0,Clip de montaje,BC,lgbm-global,8,1
+59.0,Clip de montaje,BC,lgbm-global,4,0
+59.0,Clip de montaje,BC,lgbm-global,8,1
+60.0,No Clavo,BC,lgbm-global,4,1
+60.0,No Clavo,BC,lgbm-global,8,1
+60.0,No Clavo,BC,lgbm-global,4,0
+60.0,No Clavo,BC,lgbm-global,8,3
+60.0,No Clavo,BC,lgbm-global,4,4
+60.0,No Clavo,BC,lgbm-global,8,4
+60.0,No Clavo,BC,lgbm-global,4,2
+60.0,No Clavo,BC,lgbm-global,8,2
+60.0,No Clavo,BC,lgbm-global,4,0
+60.0,No Clavo,BC,lgbm-global,8,2
+60.0,No Clavo,BC,lgbm-global,4,2
+60.0,No Clavo,BC,lgbm-global,8,1
+60.0,No Clavo,BC,lgbm-global,4,3
+60.0,No Clavo,BC,lgbm-global,8,2
+60.0,No Clavo,BC,lgbm-global,4,1
+60.0,No Clavo,BC,lgbm-global,8,1
+60.0,No Clavo,BC,lgbm-global,4,3
+60.0,No Clavo,BC,lgbm-global,8,1
+60.0,No Clavo,BC,lgbm-global,4,1
+60.0,No Clavo,BC,lgbm-global,8,0
+60.0,No Clavo,BC,lgbm-global,4,1
+60.0,No Clavo,BC,lgbm-global,8,1
+61.0,Fix All,BC,croston-sba,4,1
+61.0,Fix All,BC,croston-sba,8,1
+61.0,Fix All,BC,croston-sba,4,2
+61.0,Fix All,BC,croston-sba,8,4
+61.0,Fix All,BC,croston-sba,4,2
+61.0,Fix All,BC,croston-sba,8,4
+61.0,Fix All,BC,croston-sba,4,3
+61.0,Fix All,BC,croston-sba,8,4
+61.0,Fix All,BC,croston-sba,4,8
+61.0,Fix All,BC,croston-sba,8,4
+61.0,Fix All,BC,croston-sba,4,0
+61.0,Fix All,BC,croston-sba,8,0
+61.0,Fix All,BC,croston-sba,4,1
+61.0,Fix All,BC,croston-sba,8,1
+61.0,Fix All,BC,croston-sba,4,1
+61.0,Fix All,BC,croston-sba,8,1
+61.0,Fix All,BC,croston-sba,4,0
+61.0,Fix All,BC,croston-sba,8,0
+61.0,Fix All,BC,croston-sba,4,1
+61.0,Fix All,BC,croston-sba,8,2
+61.0,Fix All,BC,croston-sba,4,1
+61.0,Fix All,BC,croston-sba,8,1
+62.0,Galon no Clavo,BC,croston-sba,4,0
+62.0,Galon no Clavo,BC,croston-sba,8,1
+62.0,Galon no Clavo,BC,croston-sba,4,2
+62.0,Galon no Clavo,BC,croston-sba,8,4
+62.0,Galon no Clavo,BC,croston-sba,4,6
+62.0,Galon no Clavo,BC,croston-sba,8,4
+62.0,Galon no Clavo,BC,croston-sba,4,0
+62.0,Galon no Clavo,BC,croston-sba,8,1
+62.0,Galon no Clavo,BC,croston-sba,4,0
+62.0,Galon no Clavo,BC,croston-sba,8,1
+62.0,Galon no Clavo,BC,croston-sba,4,0
+62.0,Galon no Clavo,BC,croston-sba,8,0
+62.0,Galon no Clavo,BC,croston-sba,4,0
+62.0,Galon no Clavo,BC,croston-sba,8,0
+62.0,Galon no Clavo,BC,croston-sba,4,1
+62.0,Galon no Clavo,BC,croston-sba,8,0
+62.0,Galon no Clavo,BC,croston-sba,4,0
+62.0,Galon no Clavo,BC,croston-sba,8,3
+62.0,Galon no Clavo,BC,croston-sba,4,2
+62.0,Galon no Clavo,BC,croston-sba,8,4
+62.0,Galon no Clavo,BC,croston-sba,4,0
+62.0,Galon no Clavo,BC,croston-sba,8,1
+63.0,2x3,BC,lgbm-global,8,6
+63.0,2x3,BC,lgbm-global,4,2
+63.0,2x3,BC,lgbm-global,8,6
+65.0,Lana de Vidrio,BC,media-movil-8,4,1
+65.0,Lana de Vidrio,BC,media-movil-8,8,5
+66.0,Rollete 96,BC,ets-damped,4,8
+66.0,Rollete 96,BC,ets-damped,8,4
+66.0,Rollete 96,BC,ets-damped,4,8
+66.0,Rollete 96,BC,ets-damped,8,4
+66.0,Rollete 96,BC,ets-damped,4,8
+66.0,Rollete 96,BC,ets-damped,8,4
+66.0,Rollete 96,BC,ets-damped,4,4
+66.0,Rollete 96,BC,ets-damped,8,4
+66.0,Rollete 96,BC,ets-damped,4,8
+66.0,Rollete 96,BC,ets-damped,8,4
+66.0,Rollete 96,BC,ets-damped,4,3
+66.0,Rollete 96,BC,ets-damped,8,3
+66.0,Rollete 96,BC,ets-damped,4,8
+66.0,Rollete 96,BC,ets-damped,8,4
+66.0,Rollete 96,BC,ets-damped,8,4
+66.0,Rollete 96,BC,ets-damped,4,8
+66.0,Rollete 96,BC,ets-damped,8,4

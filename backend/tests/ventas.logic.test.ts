@@ -1,5 +1,10 @@
 import { describe, expect, it } from 'vitest';
-import { calcularTotales, validarStockVenta, type ItemVenta } from '../src/modules/ventas/ventas.logic';
+import {
+  calcularTotales,
+  construirReversa,
+  validarStockVenta,
+  type ItemVenta,
+} from '../src/modules/ventas/ventas.logic';
 
 describe('calcularTotales (RF-13)', () => {
   it('calcula subtotales y total de una venta multilinea', () => {
@@ -89,5 +94,40 @@ describe('validarStockVenta (RN-01, RN-02)', () => {
     );
     expect(errores).toHaveLength(1);
     expect(errores[0]).toContain('Cantidad inválida');
+  });
+});
+
+describe('construirReversa (anulación de venta)', () => {
+  const detalles = [
+    { id: 10, productoId: 1, cantidad: 3 },
+    { id: 11, productoId: 2, cantidad: 1.5 },
+  ];
+
+  it('genera un ajuste positivo por cada detalle', () => {
+    const reversa = construirReversa(99, detalles, 7);
+    expect(reversa).toHaveLength(2);
+    expect(reversa[0]).toMatchObject({
+      productoId: 1,
+      tipo: 'ajuste',
+      cantidad: 3,
+      ventaDetalleId: 10,
+      usuarioId: 7,
+    });
+    expect(reversa[1]?.cantidad).toBe(1.5);
+  });
+
+  it('las cantidades siempre son positivas (devuelven stock)', () => {
+    const reversa = construirReversa(99, [{ id: 1, productoId: 1, cantidad: -4 }], 7);
+    expect(reversa[0]?.cantidad).toBe(4);
+  });
+
+  it('la observación referencia la venta anulada (trazabilidad)', () => {
+    const reversa = construirReversa(123, detalles, 7);
+    expect(reversa[0]?.observacion).toContain('#123');
+    expect(reversa[0]?.observacion.toLowerCase()).toContain('anulación');
+  });
+
+  it('venta sin detalles no genera movimientos', () => {
+    expect(construirReversa(99, [], 7)).toEqual([]);
   });
 });

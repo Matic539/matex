@@ -21,3 +21,9 @@ export async function obtener(req: Request, res: Response): Promise<void> {
 export async function formasPago(_req: Request, res: Response): Promise<void> {
   res.json({ data: await service.formasPago() });
 }
+
+// PATCH /api/v1/ventas/:id/anular
+export async function anular(req: Request, res: Response): Promise<void> {
+  const { id } = idParamSchema.parse(req.params);
+  res.json({ data: await service.anular(id, req.user!.id) });
+}

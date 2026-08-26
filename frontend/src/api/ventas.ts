@@ -60,5 +60,6 @@ export const ventasApi = {
   obtener: (id: number) => api.get<Venta>(`/ventas/${id}`),
   crear: (formaPagoId: number, items: ItemVentaInput[]) =>
     api.post<Venta>('/ventas', { formaPagoId, items }),
+  anular: (id: number) => api.patch<Venta>(`/ventas/${id}/anular`, {}),
   formasPago: () => api.get<FormaPago[]>('/ventas/formas-pago'),
 };

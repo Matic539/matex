@@ -7,6 +7,7 @@ import {
   ShoppingCart,
   Truck,
   BarChart3,
+  TrendingUp,
   Users,
   LogOut,
 } from 'lucide-react';
@@ -25,6 +26,7 @@ const navItems: { to: string; label: string; icon: typeof Package; roles: Rol[];
     { to: '/ventas', label: 'Ventas', icon: ShoppingCart, roles: ['admin', 'ventas'] },
     { to: '/proveedores', label: 'Proveedores', icon: Truck, roles: ['admin', 'inventario'] },
     { to: '/reportes', label: 'Reportes', icon: BarChart3, roles: ['admin'] },
+    { to: '/predicciones', label: 'Predicciones', icon: TrendingUp, roles: ['admin', 'inventario'] },
     { to: '/usuarios', label: 'Usuarios', icon: Users, roles: ['admin'] },
   ];
 

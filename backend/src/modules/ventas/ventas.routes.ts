@@ -15,3 +15,5 @@ ventasRouter.get('/formas-pago', asyncHandler(controller.formasPago));
 ventasRouter.get('/', asyncHandler(controller.listar));
 ventasRouter.get('/:id', asyncHandler(controller.obtener));
 ventasRouter.post('/', asyncHandler(controller.crear));
+// Anulación: conserva el registro, revierte stock (kardex) y sale de las métricas
+ventasRouter.patch('/:id/anular', asyncHandler(controller.anular));

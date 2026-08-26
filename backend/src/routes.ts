@@ -8,6 +8,7 @@ import { proveedoresRouter } from './modules/proveedores/proveedores.routes';
 import { inventarioRouter } from './modules/inventario/inventario.routes';
 import { ventasRouter } from './modules/ventas/ventas.routes';
 import { reportesRouter } from './modules/reportes/reportes.routes';
+import { prediccionesRouter } from './modules/predicciones/predicciones.routes';
 import { syncVessiRouter } from './modules/sync-vessi/sync-vessi.routes';
 
 // Router raíz /api/v1 — cada módulo de dominio monta aquí sus rutas.
@@ -23,4 +24,5 @@ apiRouter.use('/proveedores', proveedoresRouter);
 apiRouter.use('/inventario', inventarioRouter);
 apiRouter.use('/ventas', ventasRouter);
 apiRouter.use('/reportes', reportesRouter);
+apiRouter.use('/predicciones', prediccionesRouter);
 apiRouter.use('/sync-vessi', syncVessiRouter);

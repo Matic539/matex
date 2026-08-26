@@ -1,8 +1,10 @@
 import { useEffect, useState } from 'react';
 import { Link, useParams } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
+import { ArrowLeft, Ban } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Dialog } from '@/components/ui/dialog';
 import {
   Table,
   TableBody,
@@ -20,6 +22,9 @@ export function VentaDetalle() {
   const { id } = useParams();
   const [venta, setVenta] = useState<Venta | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [confirmando, setConfirmando] = useState(false);
+  const [anulando, setAnulando] = useState(false);
+  const [errorAnular, setErrorAnular] = useState<string | null>(null);
 
   useEffect(() => {
     ventasApi
@@ -27,6 +32,24 @@ export function VentaDetalle() {
       .then(setVenta)
       .catch((e: Error) => setError(e.message));
   }, [id]);
+
+  // Anulación: conserva el registro, revierte el stock (kardex) y la venta
+  // sale de las métricas. Solo ventas manuales (RN-04).
+  const puedeAnular = venta && venta.origen === 'manual' && venta.estado !== 'anulada';
+
+  async function anular() {
+    if (!venta) return;
+    setAnulando(true);
+    setErrorAnular(null);
+    try {
+      setVenta(await ventasApi.anular(venta.id));
+      setConfirmando(false);
+    } catch (e) {
+      setErrorAnular(e instanceof Error ? e.message : 'Error al anular la venta');
+    } finally {
+      setAnulando(false);
+    }
+  }
 
   if (error) {
     return (
@@ -55,15 +78,28 @@ export function VentaDetalle() {
             {venta.usuario ? ` · ${venta.usuario}` : ''}
           </p>
         </div>
-        <div className="flex gap-2">
+        <div className="flex items-center gap-2">
           <Badge variant={venta.origen === 'manual' ? 'default' : 'secondary'}>
             {venta.origen === 'manual' ? 'Manual' : venta.origen === 'vessi' ? 'Vessi' : 'Histórico'}
           </Badge>
           <Badge variant={venta.estado === 'anulada' ? 'destructive' : 'success'}>
             {venta.estado}
           </Badge>
+          {puedeAnular && (
+            <Button variant="outline" size="sm" onClick={() => setConfirmando(true)}>
+              <Ban className="text-destructive" />
+              Anular venta
+            </Button>
+          )}
         </div>
       </div>
+
+      {venta.estado === 'anulada' && (
+        <p className="rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive">
+          Venta anulada: el stock fue devuelto (ver kardex) y no se considera en métricas ni
+          proyecciones. El registro se conserva para trazabilidad.
+        </p>
+      )}
 
       <Card>
         <CardHeader>
@@ -101,11 +137,38 @@ export function VentaDetalle() {
           <div className="mt-4 flex justify-end border-t pt-4">
             <div className="text-right">
               <p className="text-sm text-muted-foreground">Total</p>
-              <p className="text-3xl font-bold">{formatCLP(venta.total)}</p>
+              <p
+                className={`text-3xl font-bold ${venta.estado === 'anulada' ? 'text-muted-foreground line-through' : ''}`}
+              >
+                {formatCLP(venta.total)}
+              </p>
             </div>
           </div>
         </CardContent>
       </Card>
+
+      <Dialog
+        open={confirmando}
+        onClose={() => setConfirmando(false)}
+        title={`Anular venta #${venta.id}`}
+        description="El registro se conservará como anulado, el stock de los productos será devuelto (trazado en el kardex) y la venta dejará de contar en métricas y proyecciones. Esta acción no se puede deshacer."
+      >
+        <div className="space-y-4">
+          {errorAnular && (
+            <p className="rounded-md bg-destructive/10 px-3 py-2 text-sm text-destructive">
+              {errorAnular}
+            </p>
+          )}
+          <div className="flex justify-end gap-2">
+            <Button variant="outline" onClick={() => setConfirmando(false)}>
+              Cancelar
+            </Button>
+            <Button variant="destructive" onClick={anular} disabled={anulando}>
+              {anulando ? 'Anulando…' : 'Sí, anular venta'}
+            </Button>
+          </div>
+        </div>
+      </Dialog>
     </div>
   );
 }

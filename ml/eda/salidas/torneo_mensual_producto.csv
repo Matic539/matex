@@ -1,0 +1,168 @@
+serie_id,modelo,mape,wape,mape_acum,n_folds,monto_total,nombre,nivel,granularidad
+1.0,media-movil-8,44.23,60.76,41.66,6,135110125.1,SPC DARK,producto,mensual
+1.0,naive-estacional,64.13,63.79,63.79,6,135110125.1,SPC DARK,producto,mensual
+1.0,ets-damped,52.34,63.2,47.77,6,135110125.1,SPC DARK,producto,mensual
+1.0,sarima-111-011-12,70.47,71.77,66.39,6,135110125.1,SPC DARK,producto,mensual
+2.0,media-movil-8,46.01,42.43,25.59,6,51466300.73,SPC MEDIUM,producto,mensual
+2.0,naive-estacional,51.61,59.25,49.53,6,51466300.73,SPC MEDIUM,producto,mensual
+2.0,ets-damped,74.36,69.98,36.84,6,51466300.73,SPC MEDIUM,producto,mensual
+2.0,sarima-111-011-12,69.44,73.28,55.28,6,51466300.73,SPC MEDIUM,producto,mensual
+2.0,croston-sba,44.97,44.61,32.47,6,51466300.73,SPC MEDIUM,producto,mensual
+3.0,media-movil-8,59.64,59.38,19.75,6,78278440.1,SPC GREY,producto,mensual
+3.0,naive-estacional,70.04,78.09,39.22,6,78278440.1,SPC GREY,producto,mensual
+3.0,ets-damped,112.92,81.11,22.7,6,78278440.1,SPC GREY,producto,mensual
+3.0,sarima-111-011-12,125.24,79.23,28.88,6,78278440.1,SPC GREY,producto,mensual
+4.0,media-movil-8,495.51,269.07,262.3,6,68843672.4,Terc Estr 15mm,producto,mensual
+4.0,naive-estacional,538.0,361.45,321.41,6,68843672.4,Terc Estr 15mm,producto,mensual
+4.0,ets-damped,2312.17,1008.15,909.71,6,68843672.4,Terc Estr 15mm,producto,mensual
+4.0,sarima-111-011-12,1729.03,757.15,619.77,6,68843672.4,Terc Estr 15mm,producto,mensual
+5.0,media-movil-8,72.73,125.03,46.52,6,5856579.82,Terc Estr 15mm 2da,producto,mensual
+5.0,naive-estacional,68.33,98.39,24.36,6,5856579.82,Terc Estr 15mm 2da,producto,mensual
+5.0,ets-damped,61.06,145.2,42.94,6,5856579.82,Terc Estr 15mm 2da,producto,mensual
+5.0,sarima-111-011-12,65.76,133.78,25.56,6,5856579.82,Terc Estr 15mm 2da,producto,mensual
+5.0,croston-sba,66.69,136.43,27.71,6,5856579.82,Terc Estr 15mm 2da,producto,mensual
+6.0,media-movil-8,62.69,102.78,63.85,6,142024831.84,Terc Estr 18mm N,producto,mensual
+6.0,naive-estacional,53.07,53.73,42.61,6,142024831.84,Terc Estr 18mm N,producto,mensual
+6.0,ets-damped,28.51,34.79,26.27,6,142024831.84,Terc Estr 18mm N,producto,mensual
+6.0,sarima-111-011-12,33.52,34.01,30.87,6,142024831.84,Terc Estr 18mm N,producto,mensual
+7.0,media-movil-8,203.35,814.88,779.32,6,14616882.3,Terc Estr 18mm 2da,producto,mensual
+7.0,naive-estacional,115.38,1047.63,976.29,6,14616882.3,Terc Estr 18mm 2da,producto,mensual
+7.0,ets-damped,83.53,2183.13,2105.75,6,14616882.3,Terc Estr 18mm 2da,producto,mensual
+7.0,sarima-111-011-12,85.39,1164.67,1020.47,6,14616882.3,Terc Estr 18mm 2da,producto,mensual
+7.0,croston-sba,554.79,1847.43,1819.76,6,14616882.3,Terc Estr 18mm 2da,producto,mensual
+9.0,media-movil-8,,,,6,352764.71,Terc Ran 9mm,producto,mensual
+9.0,naive-estacional,,,,6,352764.71,Terc Ran 9mm,producto,mensual
+10.0,media-movil-8,64.47,51.4,33.03,6,157692176.48,PANEL CIPRES,producto,mensual
+10.0,naive-estacional,63.36,51.12,10.06,6,157692176.48,PANEL CIPRES,producto,mensual
+10.0,ets-damped,113.5,73.04,31.11,6,157692176.48,PANEL CIPRES,producto,mensual
+11.0,media-movil-8,293.41,839.22,779.3,6,52125647.09,PANEL BLACK,producto,mensual
+11.0,naive-estacional,986.59,853.82,828.4,6,52125647.09,PANEL BLACK,producto,mensual
+11.0,ets-damped,391.76,843.36,804.69,6,52125647.09,PANEL BLACK,producto,mensual
+13.0,media-movil-8,301.84,82.88,37.44,6,131493294.19,PANEL GREY,producto,mensual
+13.0,naive-estacional,185.17,57.64,16.92,6,131493294.19,PANEL GREY,producto,mensual
+13.0,ets-damped,177.81,68.02,33.54,6,131493294.19,PANEL GREY,producto,mensual
+14.0,media-movil-8,326.26,91.76,56.01,6,60803176.48,PANEL ALERCE,producto,mensual
+14.0,naive-estacional,408.25,121.76,58.09,6,60803176.48,PANEL ALERCE,producto,mensual
+14.0,ets-damped,298.21,91.46,43.56,6,60803176.48,PANEL ALERCE,producto,mensual
+14.0,croston-sba,333.87,85.08,40.4,6,60803176.48,PANEL ALERCE,producto,mensual
+16.0,media-movil-8,109.11,70.84,30.37,6,31142966.39,ELM Light Claro,producto,mensual
+16.0,naive-estacional,141.13,109.71,26.8,6,31142966.39,ELM Light Claro,producto,mensual
+16.0,ets-damped,58.46,57.72,29.54,6,31142966.39,ELM Light Claro,producto,mensual
+17.0,media-movil-8,124.83,85.46,54.79,6,6040336.13,ELM Grey,producto,mensual
+17.0,naive-estacional,295.52,244.57,221.18,6,6040336.13,ELM Grey,producto,mensual
+17.0,ets-damped,81.52,80.5,59.05,6,6040336.13,ELM Grey,producto,mensual
+18.0,media-movil-8,64.42,37.92,18.2,6,14587411.72,ELM AGED,producto,mensual
+18.0,naive-estacional,73.74,58.79,18.12,6,14587411.72,ELM AGED,producto,mensual
+20.0,media-movil-8,,,,6,7067193.31,T1-11 Teak,producto,mensual
+20.0,naive-estacional,,,,6,7067193.31,T1-11 Teak,producto,mensual
+20.0,ets-damped,,,,6,7067193.31,T1-11 Teak,producto,mensual
+20.0,croston-sba,,,,6,7067193.31,T1-11 Teak,producto,mensual
+21.0,media-movil-8,301.07,82.14,42.96,6,14204857.18,T1-11 Cherry,producto,mensual
+21.0,naive-estacional,227.47,88.94,57.96,6,14204857.18,T1-11 Cherry,producto,mensual
+21.0,ets-damped,561.3,121.1,112.63,6,14204857.18,T1-11 Cherry,producto,mensual
+22.0,media-movil-8,391.93,83.57,34.5,6,20456605.04,T1-11 Dark,producto,mensual
+22.0,naive-estacional,287.85,83.25,47.78,6,20456605.04,T1-11 Dark,producto,mensual
+22.0,ets-damped,512.23,90.45,33.27,6,20456605.04,T1-11 Dark,producto,mensual
+25.0,media-movil-8,52.99,142.75,95.59,6,7878411.82,WALL tex café,producto,mensual
+25.0,naive-estacional,86.28,105.78,58.7,6,7878411.82,WALL tex café,producto,mensual
+25.0,ets-damped,40.48,167.06,125.79,6,7878411.82,WALL tex café,producto,mensual
+25.0,croston-sba,62.6,138.12,86.6,6,7878411.82,WALL tex café,producto,mensual
+26.0,media-movil-8,49.35,38.55,23.48,6,106311580.28,Marmolisima Blanca,producto,mensual
+26.0,naive-estacional,55.52,49.38,36.07,6,106311580.28,Marmolisima Blanca,producto,mensual
+26.0,ets-damped,54.6,40.54,25.84,6,106311580.28,Marmolisima Blanca,producto,mensual
+27.0,media-movil-8,106.21,69.88,48.18,6,60782118.06,Marmolisima Gris,producto,mensual
+27.0,naive-estacional,52.4,60.1,33.16,6,60782118.06,Marmolisima Gris,producto,mensual
+27.0,ets-damped,177.29,114.35,92.9,6,60782118.06,Marmolisima Gris,producto,mensual
+28.0,media-movil-8,103.57,79.02,44.26,6,13853067.31,Marmolisima Travertino,producto,mensual
+28.0,naive-estacional,172.14,155.95,75.32,6,13853067.31,Marmolisima Travertino,producto,mensual
+28.0,ets-damped,96.26,82.1,67.0,6,13853067.31,Marmolisima Travertino,producto,mensual
+29.0,media-movil-8,199.6,122.12,100.59,6,20079807.01,Marmolisima Negra,producto,mensual
+29.0,naive-estacional,313.73,186.34,132.01,6,20079807.01,Marmolisima Negra,producto,mensual
+29.0,ets-damped,241.83,169.66,159.5,6,20079807.01,Marmolisima Negra,producto,mensual
+30.0,media-movil-8,105.0,84.12,69.23,6,25706722.87,Marmolisima Azul,producto,mensual
+30.0,naive-estacional,100.01,85.59,33.11,6,25706722.87,Marmolisima Azul,producto,mensual
+30.0,ets-damped,198.35,148.09,126.45,6,25706722.87,Marmolisima Azul,producto,mensual
+33.0,media-movil-8,407.13,140.13,89.88,6,12175941.23,Panel White Interior,producto,mensual
+33.0,naive-estacional,379.89,157.32,30.73,6,12175941.23,Panel White Interior,producto,mensual
+33.0,ets-damped,444.95,138.6,89.81,6,12175941.23,Panel White Interior,producto,mensual
+34.0,media-movil-8,,,,3,526613.44,Panel Roca Light,producto,mensual
+34.0,naive-estacional,,,,3,526613.44,Panel Roca Light,producto,mensual
+34.0,croston-sba,,,,3,526613.44,Panel Roca Light,producto,mensual
+35.0,media-movil-8,45.61,280.58,262.72,6,1579840.35,Panel Roca Black,producto,mensual
+35.0,naive-estacional,100.0,1518.3,1350.45,6,1579840.35,Panel Roca Black,producto,mensual
+35.0,croston-sba,157.49,723.55,690.84,6,1579840.35,Panel Roca Black,producto,mensual
+36.0,media-movil-8,,,,3,315571.44,Separador de Ambiente,producto,mensual
+36.0,naive-estacional,,,,3,315571.44,Separador de Ambiente,producto,mensual
+36.0,croston-sba,,,,3,315571.44,Separador de Ambiente,producto,mensual
+37.0,media-movil-8,62.34,45.99,19.68,6,9661310.78,Perfil H Grey,producto,mensual
+37.0,naive-estacional,104.75,92.74,25.66,6,9661310.78,Perfil H Grey,producto,mensual
+37.0,ets-damped,80.31,58.34,39.1,6,9661310.78,Perfil H Grey,producto,mensual
+38.0,media-movil-8,207.11,90.44,47.64,6,3329462.18,Perfil H Gold,producto,mensual
+38.0,naive-estacional,98.47,71.13,42.82,6,3329462.18,Perfil H Gold,producto,mensual
+38.0,ets-damped,255.57,108.74,64.38,6,3329462.18,Perfil H Gold,producto,mensual
+59.0,media-movil-8,28.88,28.35,22.34,6,6573689.2,Clip de montaje,producto,mensual
+59.0,naive-estacional,46.95,46.66,46.66,6,6573689.2,Clip de montaje,producto,mensual
+59.0,ets-damped,39.35,32.66,24.13,6,6573689.2,Clip de montaje,producto,mensual
+60.0,media-movil-8,61.78,43.42,25.05,6,9207176.16,No Clavo,producto,mensual
+60.0,naive-estacional,66.89,53.4,25.59,6,9207176.16,No Clavo,producto,mensual
+60.0,ets-damped,56.76,41.66,17.89,6,9207176.16,No Clavo,producto,mensual
+61.0,media-movil-8,30.37,32.78,31.58,6,8312285.84,Fix All,producto,mensual
+61.0,naive-estacional,54.65,53.0,33.79,6,8312285.84,Fix All,producto,mensual
+61.0,ets-damped,26.73,28.37,27.25,6,8312285.84,Fix All,producto,mensual
+62.0,media-movil-8,97.66,58.58,57.44,6,6299369.99,Galon no Clavo,producto,mensual
+62.0,naive-estacional,103.13,73.5,53.43,6,6299369.99,Galon no Clavo,producto,mensual
+62.0,ets-damped,140.54,90.06,90.06,6,6299369.99,Galon no Clavo,producto,mensual
+63.0,media-movil-8,,,,6,2595630.19,2x3,producto,mensual
+63.0,naive-estacional,,,,6,2595630.19,2x3,producto,mensual
+63.0,ets-damped,,,,6,2595630.19,2x3,producto,mensual
+63.0,sarima-111-011-12,,,,6,2595630.19,2x3,producto,mensual
+64.0,media-movil-8,,,,6,1681260.53,Terraza 4',producto,mensual
+64.0,naive-estacional,,,,6,1681260.53,Terraza 4',producto,mensual
+64.0,ets-damped,,,,6,1681260.53,Terraza 4',producto,mensual
+64.0,sarima-111-011-12,,,,6,1681260.53,Terraza 4',producto,mensual
+64.0,croston-sba,,,,6,1681260.53,Terraza 4',producto,mensual
+65.0,media-movil-8,,,,6,11164857.03,Lana de Vidrio,producto,mensual
+65.0,naive-estacional,,,,6,11164857.03,Lana de Vidrio,producto,mensual
+65.0,ets-damped,,,,6,11164857.03,Lana de Vidrio,producto,mensual
+66.0,media-movil-8,229.41,281.38,274.54,6,22819915.93,Rollete 96,producto,mensual
+66.0,naive-estacional,287.43,584.04,576.43,6,22819915.93,Rollete 96,producto,mensual
+66.0,ets-damped,905.8,483.28,443.89,6,22819915.93,Rollete 96,producto,mensual
+66.0,sarima-111-011-12,146.82,226.77,159.72,6,22819915.93,Rollete 96,producto,mensual
+1.0,lgbm-global,72.08,79.5,68.58,6,135110125.1,SPC DARK,producto,mensual
+2.0,lgbm-global,45.19,47.06,30.82,6,51466300.73,SPC MEDIUM,producto,mensual
+3.0,lgbm-global,113.26,90.69,33.87,6,78278440.1,SPC GREY,producto,mensual
+4.0,lgbm-global,963.07,526.89,485.21,6,68843672.4,Terc Estr 15mm,producto,mensual
+5.0,lgbm-global,56.73,108.6,21.85,6,5856579.82,Terc Estr 15mm 2da,producto,mensual
+6.0,lgbm-global,64.98,81.71,66.72,6,142024831.84,Terc Estr 18mm N,producto,mensual
+7.0,lgbm-global,93.04,1542.02,1499.24,6,14616882.3,Terc Estr 18mm 2da,producto,mensual
+9.0,lgbm-global,,,,6,352764.71,Terc Ran 9mm,producto,mensual
+10.0,lgbm-global,48.34,49.01,48.81,6,157692176.48,PANEL CIPRES,producto,mensual
+11.0,lgbm-global,406.71,870.2,797.89,6,52125647.09,PANEL BLACK,producto,mensual
+13.0,lgbm-global,149.59,78.81,57.31,6,131493294.19,PANEL GREY,producto,mensual
+14.0,lgbm-global,248.53,89.15,53.54,6,60803176.48,PANEL ALERCE,producto,mensual
+16.0,lgbm-global,101.98,77.63,15.64,6,31142966.39,ELM Light Claro,producto,mensual
+17.0,lgbm-global,226.55,188.15,143.48,6,6040336.13,ELM Grey,producto,mensual
+18.0,lgbm-global,49.89,47.44,12.08,6,14587411.72,ELM AGED,producto,mensual
+20.0,lgbm-global,,,,6,7067193.31,T1-11 Teak,producto,mensual
+21.0,lgbm-global,259.86,83.75,32.2,6,14204857.18,T1-11 Cherry,producto,mensual
+22.0,lgbm-global,232.51,78.5,42.62,6,20456605.04,T1-11 Dark,producto,mensual
+25.0,lgbm-global,36.18,117.45,89.47,6,7878411.82,WALL tex café,producto,mensual
+26.0,lgbm-global,54.03,43.87,33.45,6,106311580.28,Marmolisima Blanca,producto,mensual
+27.0,lgbm-global,133.25,76.23,43.79,6,60782118.06,Marmolisima Gris,producto,mensual
+28.0,lgbm-global,258.85,134.51,84.13,6,13853067.31,Marmolisima Travertino,producto,mensual
+29.0,lgbm-global,205.9,142.85,112.42,6,20079807.01,Marmolisima Negra,producto,mensual
+30.0,lgbm-global,163.02,132.31,118.09,6,25706722.87,Marmolisima Azul,producto,mensual
+33.0,lgbm-global,320.32,152.16,116.42,6,12175941.23,Panel White Interior,producto,mensual
+35.0,lgbm-global,120.66,1611.75,1564.3,6,1579840.35,Panel Roca Black,producto,mensual
+37.0,lgbm-global,111.06,78.07,61.19,6,9661310.78,Perfil H Grey,producto,mensual
+38.0,lgbm-global,319.08,164.32,123.46,6,3329462.18,Perfil H Gold,producto,mensual
+59.0,lgbm-global,41.65,41.72,32.02,6,6573689.2,Clip de montaje,producto,mensual
+60.0,lgbm-global,75.79,57.26,50.34,6,9207176.16,No Clavo,producto,mensual
+61.0,lgbm-global,34.9,34.31,22.46,6,8312285.84,Fix All,producto,mensual
+62.0,lgbm-global,276.83,227.59,225.68,6,6299369.99,Galon no Clavo,producto,mensual
+63.0,lgbm-global,,,,6,2595630.19,2x3,producto,mensual
+64.0,lgbm-global,,,,6,1681260.53,Terraza 4',producto,mensual
+65.0,lgbm-global,,,,6,11164857.03,Lana de Vidrio,producto,mensual
+66.0,lgbm-global,286.68,458.4,436.33,6,22819915.93,Rollete 96,producto,mensual
+34.0,lgbm-global,,,,3,526613.44,Panel Roca Light,producto,mensual
+36.0,lgbm-global,,,,3,315571.44,Separador de Ambiente,producto,mensual

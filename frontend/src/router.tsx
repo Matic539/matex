@@ -7,6 +7,7 @@ import { Inventario } from '@/pages/Inventario';
 import { Login } from '@/pages/Login';
 import { NotFound } from '@/pages/NotFound';
 import { NuevaVenta } from '@/pages/NuevaVenta';
+import { Predicciones } from '@/pages/Predicciones';
 import { ProductoDetalle } from '@/pages/ProductoDetalle';
 import { Productos } from '@/pages/Productos';
 import { Proveedores } from '@/pages/Proveedores';
@@ -45,6 +46,7 @@ export const router = createBrowserRouter([
             element: <ProtectedRoute roles={['admin', 'inventario']} />,
             children: [
               { path: 'inventario', element: <Inventario /> },
+              { path: 'predicciones', element: <Predicciones /> },
               { path: 'proveedores', element: <Proveedores /> },
             ],
           },

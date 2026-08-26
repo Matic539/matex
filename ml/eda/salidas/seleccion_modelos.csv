@@ -1,0 +1,104 @@
+granularidad,nivel,serie_id,nombre,modelo_ganador,wape,wape_mejor_baseline,skill_pct,mape_acum,monto_total,n_folds
+mensual,categoria,1.0,Pisos SPC,ets-damped,46.7,46.9,0.6,37.8,264854865.92999998,6
+mensual,categoria,2.0,Terciados,naive-estacional,53.2,53.2,0.0,27.8,231694731.07,6
+mensual,categoria,3.0,Paneles exteriores,naive-estacional,34.8,34.8,0.0,27.9,421742613.57,6
+mensual,categoria,4.0,Paneles interiores,ets-damped,24.9,25.8,3.3,11.1,103400487.42000002,6
+mensual,categoria,5.0,Revestimientos murales,naive-estacional,30.3,30.3,0.0,17.0,256681262.06000003,6
+mensual,categoria,6.0,Perfiles y terminaciones,media-movil-8,30.5,30.5,0.0,26.1,37019983.010000005,6
+mensual,categoria,7.0,Adhesivos,media-movil-8,24.2,24.2,0.0,7.6,23818831.99,6
+mensual,categoria,10.0,Accesorios,sarima-111-011-12,226.8,281.4,19.4,159.7,22819915.93,6
+mensual,producto,1.0,SPC DARK,media-movil-8,60.8,60.8,0.0,41.7,135110125.1,6
+mensual,producto,2.0,SPC MEDIUM,media-movil-8,42.4,42.4,0.0,25.6,51466300.730000004,6
+mensual,producto,3.0,SPC GREY,media-movil-8,59.4,59.4,0.0,19.8,78278440.10000001,6
+mensual,producto,4.0,Terc Estr 15mm,media-movil-8,269.1,269.1,0.0,262.3,68843672.39999999,6
+mensual,producto,5.0,Terc Estr 15mm 2da,naive-estacional,98.4,98.4,0.0,24.4,5856579.82,6
+mensual,producto,6.0,Terc Estr 18mm N,sarima-111-011-12,34.0,53.7,36.7,30.9,142024831.84,6
+mensual,producto,7.0,Terc Estr 18mm 2da,media-movil-8,814.9,814.9,0.0,779.3,14616882.299999999,6
+mensual,producto,10.0,PANEL CIPRES,lgbm-global,49.0,51.1,4.1,48.8,157692176.48,6
+mensual,producto,11.0,PANEL BLACK,media-movil-8,839.2,839.2,0.0,779.3,52125647.09,6
+mensual,producto,13.0,PANEL GREY,naive-estacional,57.6,57.6,0.0,16.9,131493294.19,6
+mensual,producto,14.0,PANEL ALERCE,croston-sba,85.1,91.8,7.3,40.4,60803176.48,6
+mensual,producto,16.0,ELM Light Claro,ets-damped,57.7,70.8,18.5,29.5,31142966.39,6
+mensual,producto,17.0,ELM Grey,ets-damped,80.5,85.5,5.8,59.0,6040336.129999999,6
+mensual,producto,18.0,ELM AGED,media-movil-8,37.9,37.9,0.0,18.2,14587411.72,6
+mensual,producto,21.0,T1-11 Cherry,media-movil-8,82.1,82.1,0.0,43.0,14204857.180000002,6
+mensual,producto,22.0,T1-11 Dark,lgbm-global,78.5,83.3,5.7,42.6,20456605.04,6
+mensual,producto,25.0,WALL tex café,naive-estacional,105.8,105.8,0.0,58.7,7878411.82,6
+mensual,producto,26.0,Marmolisima Blanca,media-movil-8,38.5,38.5,0.0,23.5,106311580.28,6
+mensual,producto,27.0,Marmolisima Gris,naive-estacional,60.1,60.1,0.0,33.2,60782118.059999995,6
+mensual,producto,28.0,Marmolisima Travertino,media-movil-8,79.0,79.0,0.0,44.3,13853067.31,6
+mensual,producto,29.0,Marmolisima Negra,media-movil-8,122.1,122.1,0.0,100.6,20079807.01,6
+mensual,producto,30.0,Marmolisima Azul,media-movil-8,84.1,84.1,0.0,69.2,25706722.87,6
+mensual,producto,33.0,Panel White Interior,ets-damped,138.6,140.1,1.1,89.8,12175941.23,6
+mensual,producto,35.0,Panel Roca Black,media-movil-8,280.6,280.6,0.0,262.7,1579840.35,6
+mensual,producto,37.0,Perfil H Grey,media-movil-8,46.0,46.0,0.0,19.7,9661310.780000001,6
+mensual,producto,38.0,Perfil H Gold,naive-estacional,71.1,71.1,0.0,42.8,3329462.18,6
+mensual,producto,59.0,Clip de montaje,media-movil-8,28.4,28.4,0.0,22.3,6573689.2,6
+mensual,producto,60.0,No Clavo,ets-damped,41.7,43.4,4.0,17.9,9207176.159999998,6
+mensual,producto,61.0,Fix All,ets-damped,28.4,32.8,13.4,27.2,8312285.840000001,6
+mensual,producto,62.0,Galon no Clavo,media-movil-8,58.6,58.6,0.0,57.4,6299369.990000001,6
+mensual,producto,66.0,Rollete 96,sarima-111-011-12,226.8,281.4,19.4,159.7,22819915.93,6
+semanal,categoria,1.0,Pisos SPC,ets-damped,77.5,92.4,16.1,42.4,271062748.28999996,10
+semanal,categoria,2.0,Terciados,naive-estacional,144.8,144.8,0.0,120.5,233687899.14999998,10
+semanal,categoria,3.0,Paneles exteriores,naive-estacional,76.9,76.9,0.0,31.4,424644386.65999997,10
+semanal,categoria,4.0,Paneles interiores,media-movil-8,46.3,46.3,0.0,12.1,106103537.83999999,10
+semanal,categoria,5.0,Revestimientos murales,media-movil-8,52.4,52.4,0.0,33.7,261993984.78999996,10
+semanal,categoria,6.0,Perfiles y terminaciones,media-movil-8,55.7,55.7,0.0,18.8,38957204.86,10
+semanal,categoria,7.0,Adhesivos,media-movil-8,50.1,50.1,0.0,20.2,24520352.990000002,10
+semanal,categoria,10.0,Accesorios,ets-damped,133.7,212.1,36.9,97.5,22888739.459999997,10
+semanal,producto,1.0,SPC DARK,ets-damped,106.1,110.1,3.6,47.5,138893977.21,10
+semanal,producto,2.0,SPC MEDIUM,lgbm-global,93.0,108.5,14.4,66.9,52027966.28,10
+semanal,producto,3.0,SPC GREY,ets-damped,128.2,168.9,24.1,85.7,80140804.8,10
+semanal,producto,4.0,Terc Estr 15mm,media-movil-8,308.4,308.4,0.0,263.2,70836840.48,10
+semanal,producto,5.0,Terc Estr 15mm 2da,lgbm-global,122.6,129.0,5.0,72.3,5856579.82,10
+semanal,producto,6.0,Terc Estr 18mm N,naive-estacional,61.1,61.1,0.0,47.8,142024831.84,10
+semanal,producto,7.0,Terc Estr 18mm 2da,lgbm-global,255.4,624.9,59.1,223.0,14616882.3,10
+semanal,producto,10.0,PANEL CIPRES,lgbm-global,81.7,117.4,30.4,44.8,158901588.24,10
+semanal,producto,11.0,PANEL BLACK,lgbm-global,362.3,860.3,57.9,313.9,52125647.09,10
+semanal,producto,12.0,PANEL NEW BLACK,lgbm-global,98.2,120.5,18.5,86.3,20474092.43,7
+semanal,producto,13.0,PANEL GREY,lgbm-global,134.8,201.0,32.9,92.9,132339882.42,10
+semanal,producto,14.0,PANEL ALERCE,lgbm-global,103.6,153.3,32.5,64.7,60803176.48,10
+semanal,producto,16.0,ELM Light Claro,media-movil-8,89.3,89.3,0.0,43.9,31394647.060000002,10
+semanal,producto,17.0,ELM Grey,lgbm-global,170.2,196.6,13.4,121.8,6191344.53,10
+semanal,producto,18.0,ELM AGED,croston-sba,71.1,80.8,12.1,16.4,15347487.360000003,7
+semanal,producto,19.0,ELM Black,lgbm-global,118.5,152.6,22.3,59.6,1600689.06,9
+semanal,producto,21.0,T1-11 Cherry,lgbm-global,121.5,135.9,10.6,70.7,14748487.43,10
+semanal,producto,22.0,T1-11 Dark,lgbm-global,98.3,107.6,8.7,53.7,21367689.07,10
+semanal,producto,23.0,T1-11 Light,lgbm-global,127.5,338.2,62.3,102.6,8386000.02,9
+semanal,producto,24.0,WALL tex blanco,lgbm-global,208.8,502.5,58.4,37.1,2116588.25,8
+semanal,producto,25.0,WALL tex café,naive-estacional,118.9,118.9,0.0,65.9,7878411.82,10
+semanal,producto,26.0,Marmolisima Blanca,lgbm-global,51.5,57.8,11.0,22.8,109396387.02,10
+semanal,producto,27.0,Marmolisima Gris,naive-estacional,89.8,89.8,0.0,39.1,62410210.510000005,10
+semanal,producto,28.0,Marmolisima Travertino,lgbm-global,134.5,145.2,7.4,89.8,13853067.31,10
+semanal,producto,29.0,Marmolisima Negra,croston-sba,186.3,209.9,11.2,128.6,20308311.22,10
+semanal,producto,30.0,Marmolisima Azul,naive-estacional,139.1,139.1,0.0,57.4,26078042.200000003,10
+semanal,producto,32.0,Marmol SPC 3mm,lgbm-global,100.3,123.0,18.4,72.3,5355000.0,3
+semanal,producto,33.0,Panel White Interior,lgbm-global,156.0,224.3,30.4,77.2,12175941.23,10
+semanal,producto,34.0,Panel Roca Light,media-movil-8,191.9,191.9,0.0,81.9,526613.4400000001,10
+semanal,producto,35.0,Panel Roca Black,ets-damped,101.0,195.0,48.2,99.0,1579840.3499999999,10
+semanal,producto,37.0,Perfil H Grey,ets-damped,67.4,71.9,6.3,34.3,10017739.35,10
+semanal,producto,38.0,Perfil H Gold,lgbm-global,137.7,159.5,13.7,75.5,3354621.84,10
+semanal,producto,39.0,Perfil E Grey,media-movil-8,90.6,90.6,0.0,58.9,2008579.7199999997,9
+semanal,producto,40.0,Perfil E Gold,media-movil-8,271.2,271.2,0.0,218.1,385781.5,9
+semanal,producto,41.0,Perfil ITSPANEL V Cipres,lgbm-global,162.5,211.1,23.0,107.4,959436.96,7
+semanal,producto,42.0,Perfil ITSPANEL V Alerce,lgbm-global,272.1,347.4,21.7,197.7,0.0,5
+semanal,producto,43.0,Perfil ITSPANEL V Gris,lgbm-global,142.0,376.9,62.3,61.5,428798.35,3
+semanal,producto,44.0,Perfil ITSPANEL V Negro,media-movil-8,155.2,155.2,0.0,64.1,604369.75,5
+semanal,producto,45.0,Perfil ITSPANEL V Blanco,lgbm-global,159.5,257.3,38.0,94.4,241747.89,5
+semanal,producto,46.0,Perfil ITSPANEL J Cipres,lgbm-global,190.8,366.6,48.0,150.6,3603554.6,7
+semanal,producto,47.0,Perfil ITSPANEL J Alerce,media-movil-8,100.0,100.0,0.0,100.0,1125638.6400000001,5
+semanal,producto,48.0,Perfil ITSPANEL J Gris,lgbm-global,328.7,4642.7,92.9,281.6,2107739.5100000002,3
+semanal,producto,49.0,Perfil ITSPANEL J Negro,media-movil-8,100.0,100.0,0.0,100.0,1178521.02,6
+semanal,producto,50.0,Perfil ITSPANEL J Blanco,lgbm-global,205.8,1946.6,89.4,185.6,793235.31,5
+semanal,producto,51.0,Perfil ITSPANEL H Gris,lgbm-global,161.6,464.6,65.2,41.8,654806.74,3
+semanal,producto,52.0,Perfil ITSPANEL H Cipres,lgbm-global,144.2,733.3,80.3,92.1,243453.78,3
+semanal,producto,53.0,Perfil ITSPANEL H Negro,lgbm-global,214.0,309.7,30.9,62.4,201478.99,3
+semanal,producto,54.0,Perfil ITSPANEL H Alerce,lgbm-global,189.2,350.0,46.0,64.1,184689.09,3
+semanal,producto,56.0,Perfil Inicio,lgbm-global,97.4,159.1,38.8,39.2,3182571.41,3
+semanal,producto,57.0,Perfil L WPC Light,media-movil-8,78.2,78.2,0.0,29.3,532546.2,3
+semanal,producto,58.0,Perfil L WPC Aged,croston-sba,96.9,97.8,0.9,17.9,427714.25000000006,3
+semanal,producto,59.0,Clip de montaje,lgbm-global,59.9,67.1,10.8,33.4,6720179.96,10
+semanal,producto,60.0,No Clavo,lgbm-global,70.2,86.2,18.5,29.5,9364764.38,10
+semanal,producto,61.0,Fix All,croston-sba,55.5,55.8,0.6,19.5,8755428.7,7
+semanal,producto,62.0,Galon no Clavo,croston-sba,45.6,70.3,35.2,22.5,6400159.910000001,3
+semanal,producto,66.0,Rollete 96,ets-damped,133.7,212.1,36.9,97.5,22888739.459999997,10

@@ -58,6 +58,7 @@ export function Productos() {
   const [buscar, setBuscar] = useState('');
   const [buscarDebounced, setBuscarDebounced] = useState('');
   const [categoriaId, setCategoriaId] = useState('');
+  const [verInactivos, setVerInactivos] = useState(false);
   const [page, setPage] = useState(1);
 
   // Modal crear/editar (solo admin)
@@ -86,6 +87,7 @@ export function Productos() {
       const res = await productosApi.listar({
         buscar: buscarDebounced || undefined,
         categoriaId: categoriaId ? Number(categoriaId) : undefined,
+        incluirInactivos: verInactivos || undefined,
         page,
         pageSize: PAGE_SIZE,
       });
@@ -102,7 +104,20 @@ export function Productos() {
   useEffect(() => {
     void cargar();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [buscarDebounced, categoriaId, page]);
+  }, [buscarDebounced, categoriaId, verInactivos, page]);
+
+  // Desactivación lógica: el producto deja de venderse y sale de las
+  // métricas (analytics filtra activo), pero su historial se conserva.
+  async function toggleEstado(p: Producto) {
+    const accion = p.activo ? 'desactivar' : 'reactivar';
+    if (!window.confirm(`¿Seguro que quieres ${accion} "${p.nombre}"?`)) return;
+    try {
+      await productosApi.cambiarEstado(p.id, !p.activo);
+      await cargar();
+    } catch (err) {
+      alert(err instanceof Error ? err.message : 'Error al cambiar estado');
+    }
+  }
 
   const totalPaginas = meta ? Math.max(1, Math.ceil(meta.total / meta.pageSize)) : 1;
 
@@ -196,6 +211,20 @@ export function Productos() {
             </option>
           ))}
         </Select>
+        {esAdmin && (
+          <label className="flex items-center gap-2 text-sm text-muted-foreground">
+            <input
+              type="checkbox"
+              checked={verInactivos}
+              onChange={(e) => {
+                setVerInactivos(e.target.checked);
+                setPage(1);
+              }}
+              className="size-4 accent-primary"
+            />
+            Mostrar inactivos
+          </label>
+        )}
       </div>
 
       {error && (
@@ -212,7 +241,7 @@ export function Productos() {
             <TableHead className="text-right">Precio (bruto)</TableHead>
             <TableHead className="text-right">Stock</TableHead>
             <TableHead>Estado</TableHead>
-            {esAdmin && <TableHead className="w-24">Acciones</TableHead>}
+            {esAdmin && <TableHead className="w-44">Acciones</TableHead>}
           </TableRow>
         </TableHeader>
         <TableBody>
@@ -260,9 +289,14 @@ export function Productos() {
                 </TableCell>
                 {esAdmin && (
                   <TableCell>
-                    <Button variant="outline" size="sm" onClick={() => abrirEditar(p)}>
-                      <Pencil />
-                    </Button>
+                    <div className="flex gap-1">
+                      <Button variant="outline" size="sm" onClick={() => abrirEditar(p)}>
+                        <Pencil />
+                      </Button>
+                      <Button variant="ghost" size="sm" onClick={() => toggleEstado(p)}>
+                        {p.activo ? 'Desactivar' : 'Activar'}
+                      </Button>
+                    </div>
                   </TableCell>
                 )}
               </TableRow>

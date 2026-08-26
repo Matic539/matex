@@ -1,7 +1,7 @@
 import { Prisma } from '@prisma/client';
 import { prisma } from '../../lib/prisma';
 import { HttpError } from '../../utils/http-error';
-import { calcularTotales, validarStockVenta } from './ventas.logic';
+import { calcularTotales, construirReversa, validarStockVenta } from './ventas.logic';
 import type { CrearVentaInput, ListarVentasInput } from './ventas.schemas';
 
 // RF-13: registrar venta manual. Transacción atómica que crea la venta,
@@ -174,6 +174,39 @@ async function obtenerTx(id: number, tx: Prisma.TransactionClient | typeof prism
 }
 
 export const obtener = (id: number) => obtenerTx(id);
+
+// Anular venta manual: el registro se conserva (estado='anulada'), el stock
+// se devuelve con ajustes trazados en el kardex y las métricas la excluyen
+// (fact_ventas filtra estado <> 'anulada').
+// RN-04: las ventas importadas (vessi/excel) son de solo lectura → no se anulan aquí.
+export async function anular(id: number, usuarioId: number) {
+  const venta = await prisma.venta.findUnique({
+    where: { id },
+    include: { detalles: true },
+  });
+  if (!venta) throw HttpError.notFound('Venta no encontrada');
+  if (venta.estado === 'anulada') throw HttpError.conflict('La venta ya está anulada');
+  if (venta.origen !== 'manual') {
+    throw HttpError.conflict(
+      'Solo se pueden anular ventas manuales; las importadas son de solo lectura (RN-04)',
+    );
+  }
+
+  const reversa = construirReversa(
+    venta.id,
+    venta.detalles.map((d) => ({ id: d.id, productoId: d.productoId, cantidad: Number(d.cantidad) })),
+    usuarioId,
+  );
+
+  await prisma.$transaction(async (tx) => {
+    await tx.venta.update({ where: { id }, data: { estado: 'anulada' } });
+    for (const mov of reversa) {
+      await tx.movimientoStock.create({ data: mov });
+    }
+  });
+
+  return obtenerTx(id);
+}
 
 export function formasPago() {
   return prisma.formaPago.findMany({ orderBy: { nombre: 'asc' } });

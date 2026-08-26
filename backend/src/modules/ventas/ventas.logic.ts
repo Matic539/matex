@@ -52,3 +52,31 @@ export function validarStockVenta(
   }
   return errores;
 }
+
+/**
+ * Movimientos de reversa para anular una venta: por cada detalle se genera
+ * un ajuste POSITIVO que devuelve el stock, trazado en el kardex con
+ * referencia al detalle original. El registro de la venta no se elimina
+ * (queda estado='anulada') y las métricas la excluyen.
+ */
+export function construirReversa(
+  ventaId: number,
+  detalles: { id: number; productoId: number; cantidad: number }[],
+  usuarioId: number,
+): {
+  productoId: number;
+  tipo: 'ajuste';
+  cantidad: number;
+  ventaDetalleId: number;
+  usuarioId: number;
+  observacion: string;
+}[] {
+  return detalles.map((d) => ({
+    productoId: d.productoId,
+    tipo: 'ajuste' as const,
+    cantidad: Math.abs(d.cantidad), // siempre positiva: devuelve stock
+    ventaDetalleId: d.id,
+    usuarioId,
+    observacion: `Reversa de stock por anulación de venta #${ventaId}`,
+  }));
+}

@@ -53,20 +53,31 @@ def predecir_smoke(series: pd.DataFrame, granularidad: str, horizonte: int) -> p
 def correr(granularidad: str, smoke: bool) -> int:
     eng = get_engine()
     horizonte = HORIZONTE[granularidad]
-    algoritmo = "smoke-media-movil" if smoke else "mixto"
+    algoritmo = "smoke-media-movil" if smoke else "mixto-p4"
     run_id = datos.crear_run(eng, granularidad, horizonte, algoritmo, version_codigo())
     try:
         datos.refrescar_vistas(eng)
-        total = 0
+        total, notas = 0, None
+        if not smoke:
+            from pipeline import predictor
+            seleccion = predictor.cargar_seleccion()
         for nivel in ("producto", "categoria"):
             series = datos.leer_series(eng, nivel, granularidad)
             if smoke:
                 pred = predecir_smoke(series, granularidad, horizonte)
             else:
-                raise NotImplementedError("Modelos reales: fases P2/P3 de PDP-02")
+                pred = predictor.predecir_nivel(series, seleccion, nivel, granularidad)
             total += datos.escribir_predicciones(eng, run_id, pred, nivel, granularidad)
-        nota = f"corrida smoke P1 ({total} predicciones)" if smoke else None
-        datos.cerrar_run(eng, run_id, "completado", notas=nota)
+        mape_g = wape_g = None
+        if smoke:
+            notas = f"corrida smoke P1 ({total} predicciones)"
+        else:
+            sel_g = seleccion[seleccion.granularidad == granularidad]
+            mape_g = round(float(sel_g["mape_acum"].median()), 2) if len(sel_g) else None
+            wape_g = round(float(sel_g["wape"].median()), 2) if len(sel_g) else None
+            notas = (f"pipeline P4: ganadores del torneo P3 ({total} predicciones); "
+                     f"métricas globales = mediana por serie del backtesting")
+        datos.cerrar_run(eng, run_id, "completado", mape=mape_g, wape=wape_g, notas=notas)
         return run_id
     except Exception as exc:  # noqa: BLE001 — el run queda auditado como fallido
         datos.cerrar_run(eng, run_id, "fallido", notas=str(exc)[:500])

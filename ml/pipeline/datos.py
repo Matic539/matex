@@ -52,6 +52,7 @@ def leer_series(engine, nivel: str, granularidad: str) -> pd.DataFrame:
 
     Excluye el período final si está incompleto (la última semana/mes con
     datos parciales sesgaría el entrenamiento y la validación)."""
+    from config import FECHA_CORTE
     unidad = "week" if granularidad == "semanal" else "month"
     df = pd.read_sql(_SQL_SERIES[nivel].format(unidad=unidad), engine,
                      parse_dates=["periodo"])
@@ -60,6 +61,12 @@ def leer_series(engine, nivel: str, granularidad: str) -> pd.DataFrame:
         "SELECT MAX(t.fecha) AS f FROM analytics.fact_ventas v "
         "JOIN analytics.dim_tiempo t ON t.fecha_id = v.fecha_id", engine)["f"].iloc[0]
     max_fecha = pd.Timestamp(max_fecha)
+    if FECHA_CORTE:  # ventana post-migración incompleta: no entrenar con ella (PDM-01)
+        corte = pd.Timestamp(FECHA_CORTE)
+        if corte < max_fecha:
+            df = df[df["periodo"] <= corte]
+            max_fecha = corte
+            log.info("Fecha de corte aplicada: se entrena solo hasta %s", corte.date())
     fin_ultimo = (df["periodo"].max() + (pd.Timedelta(days=6) if granularidad == "semanal"
                                          else pd.offsets.MonthEnd(0)))
     if fin_ultimo > max_fecha:  # período en curso, datos parciales

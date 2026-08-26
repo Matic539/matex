@@ -135,6 +135,7 @@ export function Ventas() {
             <TableHead>N°</TableHead>
             <TableHead>Fecha</TableHead>
             <TableHead>Origen</TableHead>
+            <TableHead>Estado</TableHead>
             <TableHead>Forma de pago</TableHead>
             <TableHead>Vendedor</TableHead>
             <TableHead className="text-right">Ítems</TableHead>
@@ -144,7 +145,7 @@ export function Ventas() {
         <TableBody>
           {ventas.length === 0 ? (
             <TableRow>
-              <TableCell colSpan={7} className="py-8 text-center text-muted-foreground">
+              <TableCell colSpan={8} className="py-8 text-center text-muted-foreground">
                 No hay ventas con los filtros aplicados.
               </TableCell>
             </TableRow>
@@ -162,10 +163,21 @@ export function Ventas() {
                     {ORIGEN_LABEL[v.origen]}
                   </Badge>
                 </TableCell>
+                <TableCell>
+                  {v.estado === 'anulada' ? (
+                    <Badge variant="destructive">Anulada</Badge>
+                  ) : (
+                    <Badge variant="success">{v.estado}</Badge>
+                  )}
+                </TableCell>
                 <TableCell>{v.formaPago}</TableCell>
                 <TableCell>{v.usuario ?? '—'}</TableCell>
                 <TableCell className="text-right">{v.nItems}</TableCell>
-                <TableCell className="text-right font-medium">{formatCLP(v.total)}</TableCell>
+                <TableCell
+                  className={`text-right font-medium ${v.estado === 'anulada' ? 'text-muted-foreground line-through' : ''}`}
+                >
+                  {formatCLP(v.total)}
+                </TableCell>
               </TableRow>
             ))
           )}

@@ -16,6 +16,13 @@ DB_URL = os.environ.get(
 # Granularidad de trabajo: 'semanal' (defecto) o 'mensual' (PDP-02 §3)
 GRANULARIDAD = os.environ.get("MATEX_GRANULARIDAD", "semanal")
 
+# Fecha de corte de datos confiables (YYYY-MM-DD) o vacío para usar todo.
+# Uso: mientras las ventas post-migración estén INCOMPLETAS en la BD
+# (solo las registradas en la app), entrenar únicamente hasta el corte del
+# Excel evita que el modelo aprenda una caída de demanda falsa (PDM-01).
+# Quitar la variable cuando se complete el backfill de ventas.
+FECHA_CORTE = os.environ.get("MATEX_FECHA_CORTE", "").strip() or None
+
 # Horizonte de predicción por granularidad (períodos)
 HORIZONTE = {"semanal": 12, "mensual": 6}
 
